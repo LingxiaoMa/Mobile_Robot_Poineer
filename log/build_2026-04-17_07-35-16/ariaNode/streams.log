@@ -1,6 +1,0 @@
-[0.009s] Invoking command in '/workspace/build/ariaNode': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/install/pioneer_robot:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/ariaNode -- -j8 -l8
-[0.014s] [0mCMake Error: The current CMakeCache.txt directory /workspace/build/ariaNode/CMakeCache.txt is different than the directory /workspace/AUTO4508-Team-2/build/ariaNode where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
-[0.024s] [0mCMake Error: The source directory "/workspace/AUTO4508-Team-2/src/ariaNode" does not exist.
-[0.024s] Specify --help for usage, or press the help button on the CMake GUI.[0m
-[0.025s] gmake: *** [Makefile:267: cmake_check_build_system] Error 1
-[0.027s] Invoked command in '/workspace/build/ariaNode' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/install/pioneer_robot:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/ariaNode -- -j8 -l8

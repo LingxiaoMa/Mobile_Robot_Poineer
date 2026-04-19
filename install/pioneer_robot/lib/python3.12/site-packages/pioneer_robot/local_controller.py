@@ -151,12 +151,13 @@ class LocalController(Node):
         self.declare_parameter('yaw_tolerance',        0.05)
         self.declare_parameter('replan_interval',      2.0)
         self.declare_parameter('inflate_radius',       3)    # cells
+        self.declare_parameter('use_dwa',              True) # set False to disable local avoidance
 
         # DWA parameters
         self.declare_parameter('dwa_w_samples',        20)
         self.declare_parameter('dwa_sim_time',         2.0)   # was 1.0
         self.declare_parameter('dwa_sim_step',         0.1)
-        self.declare_parameter('dwa_min_obstacle_dist',0.5)   # Pioneer radius ~0.35m + margin
+        self.declare_parameter('dwa_min_obstacle_dist',0.2)   # Pioneer radius ~0.25m + margin
         self.declare_parameter('dwa_w_heading',        1.0)
         self.declare_parameter('dwa_w_obstacle',       2.0)
         self.declare_parameter('dwa_scan_max_range',   3.0)
@@ -166,6 +167,8 @@ class LocalController(Node):
         self.cx = self.cy = self.cyaw = 0.0
         self.odom_ok = False
         self._prev_w = 0.0   # last angular command — for oscillation suppression
+        self._osc_count = 0  # consecutive sign-flip counter for oscillation detection
+        self._escape_ticks = 0  # backup escape countdown
         self.path: list[tuple[float, float]] = []
         self.goal_x = self.goal_y = self.goal_yaw = 0.0
         self._goal_pose_msg: PoseStamped | None = None
@@ -184,7 +187,7 @@ class LocalController(Node):
         self._scan_angle_inc  = 0.0
 
         # ROS interfaces
-        self.create_subscription(Odometry,       '/odom',      self._odom_cb, 10)
+        self.create_subscription(Odometry,       '/odometry/filtered', self._odom_cb, 10)
         self.create_subscription(PoseStamped,    '/goal_pose', self._goal_cb, 10)
         self.create_subscription(LaserScan,      '/scan',      self._scan_cb, 10)
         self.create_subscription(OccupancyGrid,  '/map',       self._map_cb,  10)
@@ -348,6 +351,16 @@ class LocalController(Node):
             self.state = self.IDLE
             return
 
+        # Backup escape mode — back up for N ticks then replan
+        if self._escape_ticks > 0:
+            self._escape_ticks -= 1
+            twist = Twist()
+            twist.linear.x = -0.1
+            self.cmd_pub.publish(twist)
+            if self._escape_ticks == 0:
+                self._plan_and_start()
+            return
+
         L       = self.get_parameter('lookahead_dist').value
         max_lin = self.get_parameter('max_linear_vel').value
         max_ang = self.get_parameter('max_angular_vel').value
@@ -372,8 +385,16 @@ class LocalController(Node):
             return
 
         lookahead = self._find_lookahead(L)
-        linear_vel, angular_vel = self._dwa_control(
-            lookahead[0], lookahead[1], max_lin, max_ang)
+
+        if self.get_parameter('use_dwa').value:
+            linear_vel, angular_vel = self._dwa_control(
+                lookahead[0], lookahead[1], max_lin, max_ang)
+        else:
+            goal_angle = math.atan2(lookahead[1] - self.cy, lookahead[0] - self.cx)
+            heading_err = normalize_angle(goal_angle - self.cyaw)
+            kp_ang = self.get_parameter('kp_angular').value
+            linear_vel  = max_lin * max(0.3, 1.0 - 0.6 * min(abs(heading_err) / (math.pi / 2), 1.0))
+            angular_vel = max(-max_ang, min(max_ang, kp_ang * heading_err))
 
         twist = Twist()
         twist.linear.x  = linear_vel
@@ -443,19 +464,48 @@ class LocalController(Node):
                 score = (wh * heading_score
                          + wo * obstacle_score
                          + 0.3 * velocity_score
-                         + 0.8 * continuity_score)
+                         + 1.5 * continuity_score)
 
                 if score > best_score:
                     best_score = score
                     best_v, best_w = v, w
 
-        # No safe trajectory found — stop and rotate toward goal
+        # No safe trajectory found — rotate toward most open space
         if best_score <= -1e9:
-            self._prev_w = 0.0
-            return 0.0, max_ang * 0.5 * (1.0 if goal_angle_robot > 0 else -1.0)
+            open_w = self._most_open_direction(max_ang)
+            # Oscillation detection: if we keep flipping direction, trigger backup
+            if self._prev_w != 0.0 and (open_w * self._prev_w < 0):
+                self._osc_count += 1
+            else:
+                self._osc_count = 0
+            if self._osc_count >= 4:
+                self._osc_count = 0
+                self._escape_ticks = 10  # ~0.5 s backup at 20 Hz
+                self.get_logger().warn('Oscillation detected — backing up to escape.')
+            self._prev_w = open_w
+            return 0.0, open_w
+
+        # Oscillation detection for normal DWA output
+        if self._prev_w != 0.0 and (best_w * self._prev_w < 0):
+            self._osc_count += 1
+        else:
+            self._osc_count = 0
+        if self._osc_count >= 6:
+            self._osc_count = 0
+            self._escape_ticks = 10
+            self.get_logger().warn('Oscillation detected — backing up to escape.')
 
         self._prev_w = best_w
         return best_v, best_w
+
+    def _most_open_direction(self, max_ang: float) -> float:
+        """Return angular velocity toward the most open (longest range) scan direction."""
+        if not self._scan_ranges:
+            return max_ang * 0.5
+        best_idx = max(range(len(self._scan_ranges)),
+                       key=lambda i: self._scan_ranges[i] if math.isfinite(self._scan_ranges[i]) else 0.0)
+        best_angle = self._scan_angle_min + best_idx * self._scan_angle_inc
+        return max_ang * 0.5 * (1.0 if best_angle > 0 else -1.0)
 
     def _find_lookahead(self, L):
         for px, py in self.path:

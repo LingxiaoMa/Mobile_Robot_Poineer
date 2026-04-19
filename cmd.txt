@@ -1,0 +1,59 @@
+创建docker 
+docker run -it -d --name team16_dev   --network host   --privileged   --ipc=host   --pid=host   -v /dev:/dev   -v /dev/bus/usb:/dev/bus/usb   -v $(pwd):/workspace   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix   team16:latest bash
+
+启动彩色图像和深度检测话题
+ros2 run pioneer_robot oak_driver_node
+话题
+/oak/rgb/image_raw
+/oak/stereo/image_raw
+
+启动IMU
+ros2 launch phidgets_spatial spatial-launch.py
+话题
+/imu/data_raw
+
+启动GPS 
+ros2 run nmea_navsat_driver nmea_serial_driver --ros-args -p port:=/dev/ttyACM0 -p baud:=9600
+话题
+/fix
+
+
+
+必须启动（每次都要）
+终端 1 — Pioneer 机器人驱动
+
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+ros2 run ariaNode ariaNode -rp /dev/ttyUSB0
+终端 2 — SICK Lidar
+
+
+ros2 run sick_scan_xd sick_generic_caller --ros-args \
+  -p scanner_type:=sick_tim_7xx \
+  -p hostname:=192.168.0.1 \
+  -p use_binary_protocol:=true \
+  --remap sick_tim_7xx/scan:=/scan
+终端 3 — 手柄驱动
+
+
+ros2 run joy joy_node
+终端 4 — 主控制器（模式切换）
+
+
+ros2 run pioneer_robot joy_controller
+按键：1=手动，0=自动，2=急停
+
+自动驾驶时额外启动
+终端 5 — 局部控制器
+
+
+ros2 run pioneer_robot local_controller
+锥桶检测时额外启动
+终端 6 — OAK-D 驱动（具体指令取决于你们用的 depthai 包，确认一下）
+
+终端 7 — 锥桶检测
+
+
+ros2 run pioneer_robot cone_detector
+每次进 Docker 容器先 source
+
+source /workspace/install/setup.bash

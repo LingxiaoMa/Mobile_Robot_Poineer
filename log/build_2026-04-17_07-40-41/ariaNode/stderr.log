@@ -1,2 +1,0 @@
-[0mThe root directory is /opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules[0m
-WARNING: Package name "ariaNode" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.

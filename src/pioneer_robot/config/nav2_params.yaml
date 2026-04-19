@@ -54,7 +54,7 @@ controller_server:
       max_allowed_time_to_collision_up_to_carrot: 1.0
       use_regulated_linear_velocity_scaling: true
       use_fixed_curvature_lookahead: false
-      use_cost_regulated_linear_velocity_scaling: false
+      use_cost_regulated_linear_velocity_scaling: true
       regulated_linear_scaling_min_radius: 0.9
       regulated_linear_scaling_min_speed: 0.25
       use_rotate_to_heading: true
@@ -80,7 +80,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        inflation_radius: 0.4
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: true
@@ -141,7 +141,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        inflation_radius: 0.4
       always_send_full_costmap: true
 
 map_server:
@@ -250,7 +250,7 @@ collision_monitor:
     polygons: ["PolygonStop"]
     PolygonStop:
       type: "circle"
-      radius: 0.3
+      radius: 0.2
       action_type: "stop"
       max_points: 3
       visualize: true

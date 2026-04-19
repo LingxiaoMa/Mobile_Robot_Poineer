@@ -1,1 +1,21 @@
 .vscode/
+cone_photos/
+
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Editor
+*.swp
+*.swo
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

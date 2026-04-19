@@ -13,8 +13,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name, 'resources', 'launch'),
-            glob('resources/launch/*.py')),
+        (os.path.join('share', package_name, 'launch'),
+            glob('launch/*.py')),
         (os.path.join('share', package_name, 'resources', 'worlds'),
             glob('resources/worlds/*.sdf')),
         (os.path.join('share', package_name, 'resources', 'robots'),
@@ -47,6 +47,7 @@ setup(
             'joy_controller = pioneer_robot.joy_controller:main',
             'cone_detector = pioneer_robot.cone_detector:main',
             'local_controller = pioneer_robot.local_controller:main',
+            'oak_driver_node = pioneer_robot.oak_driver_node:main',
         ],
     },
 )
