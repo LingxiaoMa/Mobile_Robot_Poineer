@@ -1,0 +1,6 @@
+[console_scripts]
+cone_detector = pioneer_robot.cone_detector:main
+gps_waypoint_follower = pioneer_robot.gps_waypoint_follower:main
+joy_controller = pioneer_robot.joy_controller:main
+local_controller = pioneer_robot.local_controller:main
+waypoint_follower = pioneer_robot.waypoint_follower:main

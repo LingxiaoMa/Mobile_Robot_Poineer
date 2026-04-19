@@ -1,0 +1,219 @@
+[0.000000] (-) TimerEvent: {}
+[0.000198] (pioneer_robot) JobQueued: {'identifier': 'pioneer_robot', 'dependencies': OrderedDict()}
+[0.000396] (pioneer_robot) JobStarted: {'identifier': 'pioneer_robot'}
+[0.099864] (-) TimerEvent: {}
+[0.200110] (-) TimerEvent: {}
+[0.300348] (-) TimerEvent: {}
+[0.400583] (-) TimerEvent: {}
+[0.500887] (-) TimerEvent: {}
+[0.601210] (-) TimerEvent: {}
+[0.701561] (-) TimerEvent: {}
+[0.801821] (-) TimerEvent: {}
+[0.902100] (-) TimerEvent: {}
+[1.002453] (-) TimerEvent: {}
+[1.102793] (-) TimerEvent: {}
+[1.203083] (-) TimerEvent: {}
+[1.303381] (-) TimerEvent: {}
+[1.403687] (-) TimerEvent: {}
+[1.504018] (-) TimerEvent: {}
+[1.604325] (-) TimerEvent: {}
+[1.704712] (-) TimerEvent: {}
+[1.804954] (-) TimerEvent: {}
+[1.905254] (-) TimerEvent: {}
+[2.005647] (-) TimerEvent: {}
+[2.105939] (-) TimerEvent: {}
+[2.206304] (-) TimerEvent: {}
+[2.306565] (-) TimerEvent: {}
+[2.406842] (-) TimerEvent: {}
+[2.507101] (-) TimerEvent: {}
+[2.607494] (-) TimerEvent: {}
+[2.707866] (-) TimerEvent: {}
+[2.808414] (-) TimerEvent: {}
+[2.908822] (-) TimerEvent: {}
+[3.009240] (-) TimerEvent: {}
+[3.109619] (-) TimerEvent: {}
+[3.210200] (-) TimerEvent: {}
+[3.310540] (-) TimerEvent: {}
+[3.410830] (-) TimerEvent: {}
+[3.511074] (-) TimerEvent: {}
+[3.611518] (-) TimerEvent: {}
+[3.711818] (-) TimerEvent: {}
+[3.812135] (-) TimerEvent: {}
+[3.912572] (-) TimerEvent: {}
+[4.012926] (-) TimerEvent: {}
+[4.113254] (-) TimerEvent: {}
+[4.213580] (-) TimerEvent: {}
+[4.313851] (-) TimerEvent: {}
+[4.414195] (-) TimerEvent: {}
+[4.514640] (-) TimerEvent: {}
+[4.614924] (-) TimerEvent: {}
+[4.715384] (-) TimerEvent: {}
+[4.815918] (-) TimerEvent: {}
+[4.916316] (-) TimerEvent: {}
+[5.016848] (-) TimerEvent: {}
+[5.117333] (-) TimerEvent: {}
+[5.217854] (-) TimerEvent: {}
+[5.318492] (-) TimerEvent: {}
+[5.418796] (-) TimerEvent: {}
+[5.519341] (-) TimerEvent: {}
+[5.619791] (-) TimerEvent: {}
+[5.720262] (-) TimerEvent: {}
+[5.820629] (-) TimerEvent: {}
+[5.920955] (-) TimerEvent: {}
+[6.021265] (-) TimerEvent: {}
+[6.121559] (-) TimerEvent: {}
+[6.221847] (-) TimerEvent: {}
+[6.322107] (-) TimerEvent: {}
+[6.422405] (-) TimerEvent: {}
+[6.522648] (-) TimerEvent: {}
+[6.622892] (-) TimerEvent: {}
+[6.723169] (-) TimerEvent: {}
+[6.823657] (-) TimerEvent: {}
+[6.924004] (-) TimerEvent: {}
+[7.024301] (-) TimerEvent: {}
+[7.124623] (-) TimerEvent: {}
+[7.224928] (-) TimerEvent: {}
+[7.325197] (-) TimerEvent: {}
+[7.425493] (-) TimerEvent: {}
+[7.525859] (-) TimerEvent: {}
+[7.626200] (-) TimerEvent: {}
+[7.726527] (-) TimerEvent: {}
+[7.826860] (-) TimerEvent: {}
+[7.927273] (-) TimerEvent: {}
+[8.027738] (-) TimerEvent: {}
+[8.128039] (-) TimerEvent: {}
+[8.228369] (-) TimerEvent: {}
+[8.328671] (-) TimerEvent: {}
+[8.428890] (-) TimerEvent: {}
+[8.529149] (-) TimerEvent: {}
+[8.629496] (-) TimerEvent: {}
+[8.729797] (-) TimerEvent: {}
+[8.830061] (-) TimerEvent: {}
+[8.930355] (-) TimerEvent: {}
+[9.030642] (-) TimerEvent: {}
+[9.131012] (-) TimerEvent: {}
+[9.231536] (-) TimerEvent: {}
+[9.331917] (-) TimerEvent: {}
+[9.432386] (-) TimerEvent: {}
+[9.532656] (-) TimerEvent: {}
+[9.632897] (-) TimerEvent: {}
+[9.733181] (-) TimerEvent: {}
+[9.833418] (-) TimerEvent: {}
+[9.933676] (-) TimerEvent: {}
+[10.034011] (-) TimerEvent: {}
+[10.134323] (-) TimerEvent: {}
+[10.234617] (-) TimerEvent: {}
+[10.334901] (-) TimerEvent: {}
+[10.435403] (-) TimerEvent: {}
+[10.535929] (-) TimerEvent: {}
+[10.636197] (-) TimerEvent: {}
+[10.736642] (-) TimerEvent: {}
+[10.837072] (-) TimerEvent: {}
+[10.937618] (-) TimerEvent: {}
+[11.037893] (-) TimerEvent: {}
+[11.138299] (-) TimerEvent: {}
+[11.238541] (-) TimerEvent: {}
+[11.338801] (-) TimerEvent: {}
+[11.439174] (-) TimerEvent: {}
+[11.539488] (-) TimerEvent: {}
+[11.639747] (-) TimerEvent: {}
+[11.740183] (-) TimerEvent: {}
+[11.840764] (-) TimerEvent: {}
+[11.941055] (-) TimerEvent: {}
+[12.041445] (-) TimerEvent: {}
+[12.141718] (-) TimerEvent: {}
+[12.242078] (-) TimerEvent: {}
+[12.342485] (-) TimerEvent: {}
+[12.442849] (-) TimerEvent: {}
+[12.543251] (-) TimerEvent: {}
+[12.643634] (-) TimerEvent: {}
+[12.743935] (-) TimerEvent: {}
+[12.844242] (-) TimerEvent: {}
+[12.944535] (-) TimerEvent: {}
+[13.044875] (-) TimerEvent: {}
+[13.145127] (-) TimerEvent: {}
+[13.245467] (-) TimerEvent: {}
+[13.345761] (-) TimerEvent: {}
+[13.446100] (-) TimerEvent: {}
+[13.546456] (-) TimerEvent: {}
+[13.646687] (-) TimerEvent: {}
+[13.746955] (-) TimerEvent: {}
+[13.847251] (-) TimerEvent: {}
+[13.947654] (-) TimerEvent: {}
+[14.047977] (-) TimerEvent: {}
+[14.148450] (-) TimerEvent: {}
+[14.248936] (-) TimerEvent: {}
+[14.349260] (-) TimerEvent: {}
+[14.449554] (-) TimerEvent: {}
+[14.549888] (-) TimerEvent: {}
+[14.650241] (-) TimerEvent: {}
+[14.750574] (-) TimerEvent: {}
+[14.850905] (-) TimerEvent: {}
+[14.951233] (-) TimerEvent: {}
+[15.051563] (-) TimerEvent: {}
+[15.152001] (-) TimerEvent: {}
+[15.252417] (-) TimerEvent: {}
+[15.352989] (-) TimerEvent: {}
+[15.453610] (-) TimerEvent: {}
+[15.553944] (-) TimerEvent: {}
+[15.654206] (-) TimerEvent: {}
+[15.754473] (-) TimerEvent: {}
+[15.854690] (-) TimerEvent: {}
+[15.954962] (-) TimerEvent: {}
+[16.055326] (-) TimerEvent: {}
+[16.155664] (-) TimerEvent: {}
+[16.255920] (-) TimerEvent: {}
+[16.356150] (-) TimerEvent: {}
+[16.456432] (-) TimerEvent: {}
+[16.556714] (-) TimerEvent: {}
+[16.657016] (-) TimerEvent: {}
+[16.757431] (-) TimerEvent: {}
+[16.857729] (-) TimerEvent: {}
+[16.958184] (-) TimerEvent: {}
+[17.058529] (-) TimerEvent: {}
+[17.158833] (-) TimerEvent: {}
+[17.259214] (-) TimerEvent: {}
+[17.359474] (-) TimerEvent: {}
+[17.459783] (-) TimerEvent: {}
+[17.560024] (-) TimerEvent: {}
+[17.660315] (-) TimerEvent: {}
+[17.760641] (-) TimerEvent: {}
+[17.861061] (-) TimerEvent: {}
+[17.961393] (-) TimerEvent: {}
+[18.061697] (-) TimerEvent: {}
+[18.162190] (-) TimerEvent: {}
+[18.262497] (-) TimerEvent: {}
+[18.354010] (pioneer_robot) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/pioneer_robot', 'build', '--build-base', '/home/winton/ros2_ws/build/pioneer_robot/build', 'install', '--record', '/home/winton/ros2_ws/build/pioneer_robot/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/winton/ros2_ws/src/pioneer_robot', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'winton', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/winton', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/winton/ros2_ws', 'TERM_PROGRAM_VERSION': '1.112.0', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2321', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2613', 'BUNDLED_DEBUGPY_PATH': '/home/winton/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '4080', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/winton/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'winton', 'JOURNAL_STREAM': '9:25235', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '10697', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'winton', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/winton/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/WintonsLaptop:@/tmp/.ICE-unix/2558,unix/WintonsLaptop:/tmp/.ICE-unix/2558', 'INVOCATION_ID': 'ea3671b9110e4adfaede5fd960b4433d', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/winton/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-8031c710886ba47e.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'PYTHONSTARTUP': '/home/winton/.config/Code/User/workspaceStorage/dfc95c23c8a10a3d67d8c7c405e0996d/ms-python.python/pythonrc.py', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.02J9M3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/winton/ros2_ws/install/pioneer_robot:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/winton/ros2_ws/build/pioneer_robot', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/winton/ros2_ws/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages:/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[18.362544] (-) TimerEvent: {}
+[18.462852] (-) TimerEvent: {}
+[18.495950] (pioneer_robot) StdoutLine: {'line': b'running egg_info\n'}
+[18.505164] (pioneer_robot) StdoutLine: {'line': b'writing ../../build/pioneer_robot/pioneer_robot.egg-info/PKG-INFO\n'}
+[18.505305] (pioneer_robot) StdoutLine: {'line': b'writing dependency_links to ../../build/pioneer_robot/pioneer_robot.egg-info/dependency_links.txt\n'}
+[18.505399] (pioneer_robot) StdoutLine: {'line': b'writing entry points to ../../build/pioneer_robot/pioneer_robot.egg-info/entry_points.txt\n'}
+[18.505473] (pioneer_robot) StdoutLine: {'line': b'writing requirements to ../../build/pioneer_robot/pioneer_robot.egg-info/requires.txt\n'}
+[18.505515] (pioneer_robot) StdoutLine: {'line': b'writing top-level names to ../../build/pioneer_robot/pioneer_robot.egg-info/top_level.txt\n'}
+[18.524373] (pioneer_robot) StdoutLine: {'line': b"reading manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'\n"}
+[18.525346] (pioneer_robot) StdoutLine: {'line': b"writing manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'\n"}
+[18.525435] (pioneer_robot) StdoutLine: {'line': b'running build\n'}
+[18.525469] (pioneer_robot) StdoutLine: {'line': b'running build_py\n'}
+[18.525513] (pioneer_robot) StdoutLine: {'line': b'copying pioneer_robot/waypoint_follower.py -> /home/winton/ros2_ws/build/pioneer_robot/build/lib/pioneer_robot\n'}
+[18.525644] (pioneer_robot) StdoutLine: {'line': b'running install\n'}
+[18.529310] (pioneer_robot) StdoutLine: {'line': b'running install_lib\n'}
+[18.538588] (pioneer_robot) StdoutLine: {'line': b'copying /home/winton/ros2_ws/build/pioneer_robot/build/lib/pioneer_robot/waypoint_follower.py -> /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot\n'}
+[18.538900] (pioneer_robot) StdoutLine: {'line': b'byte-compiling /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/waypoint_follower.py to waypoint_follower.cpython-312.pyc\n'}
+[18.540302] (pioneer_robot) StdoutLine: {'line': b'running install_data\n'}
+[18.540394] (pioneer_robot) StdoutLine: {'line': b'copying resources/launch/pioneer_launch.py -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch\n'}
+[18.540458] (pioneer_robot) StdoutLine: {'line': b'copying resources/launch/sdf.launch.py -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch\n'}
+[18.540520] (pioneer_robot) StdoutLine: {'line': b'copying resources/worlds/basic_urdf.sdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/worlds\n'}
+[18.540599] (pioneer_robot) StdoutLine: {'line': b'copying resources/robots/pioneer.urdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/robots\n'}
+[18.541075] (pioneer_robot) StdoutLine: {'line': b'copying config/nav2_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config\n'}
+[18.541436] (pioneer_robot) StdoutLine: {'line': b'running install_egg_info\n'}
+[18.552067] (pioneer_robot) StdoutLine: {'line': b"removing '/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[18.552643] (pioneer_robot) StdoutLine: {'line': b'Copying ../../build/pioneer_robot/pioneer_robot.egg-info to /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info\n'}
+[18.553010] (pioneer_robot) StdoutLine: {'line': b'running install_scripts\n'}
+[18.562945] (-) TimerEvent: {}
+[18.620660] (pioneer_robot) StdoutLine: {'line': b'Installing waypoint_follower script to /home/winton/ros2_ws/install/pioneer_robot/lib/pioneer_robot\n'}
+[18.620895] (pioneer_robot) StdoutLine: {'line': b"writing list of installed files to '/home/winton/ros2_ws/build/pioneer_robot/install.log'\n"}
+[18.635735] (pioneer_robot) CommandEnded: {'returncode': 0}
+[18.643842] (pioneer_robot) JobEnded: {'identifier': 'pioneer_robot', 'rc': 0}
+[18.644323] (-) EventReactorShutdown: {}

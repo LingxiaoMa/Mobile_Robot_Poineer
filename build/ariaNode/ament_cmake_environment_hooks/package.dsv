@@ -1,0 +1,4 @@
+source;share/ariaNode/local_setup.bash
+source;share/ariaNode/local_setup.dsv
+source;share/ariaNode/local_setup.sh
+source;share/ariaNode/local_setup.zsh

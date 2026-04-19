@@ -1,0 +1,691 @@
+<?xml version="1.0" ?>
+
+<robot name="pioneer3at_body">
+  <link name="base_link"/>
+
+  <!-- Chassis -->
+  <link name="chassis">
+
+    <inertial>
+      <mass value="20.0"/>
+      <origin xyz="0 0 -0.090"/>
+      <inertia ixx="0.3338" ixy="0.0" ixz="0.0" iyy="0.4783" iyz="0.0" izz="0.3338"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.0"/>
+      <geometry name="pioneer_geom">
+        <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/chassis.dae"/>
+      </geometry>
+      <material name="ChassisRed"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/chassis.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="chassis">
+    <material value="Gazebo/Red"/>
+  </gazebo>
+  <joint name="base_chassis_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.00 0 0.177"/>
+    <parent link="base_link"/>
+    <child link="chassis"/>
+  </joint>
+
+  <plugin
+      filename="ignition-gazebo-joint-state-publisher-system"
+      name="ignition::gazebo::systems::JointStatePublisher">
+      <topic>joint_states</topic>
+  </plugin>
+
+  <!-- Top -->
+  <link name="top_plate">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="-0.025 0 -0.223"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="pioneer_geom">
+        <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/top.dae"/>
+      </geometry>
+      <material name="TopBlack">
+        <color rgba="0.038 0.038 0.038 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="top_plate">
+    <material value="Gazebo/Black"/>
+  </gazebo>
+  <joint name="chassis_top_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.043 0 0.254"/>
+    <parent link="base_link"/>
+    <child link="top_plate"/>
+  </joint>
+
+  <!-- Front Left Wheel -->
+  <link name="p3at_front_left_axle">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual name="front_left_axle">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="pioneer_geom">
+        <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/axle.dae"/>
+      </geometry>
+      <material name="AxleGrey">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="p3at_front_left_axle">
+    <material value="Gazebo/Grey"/>
+  </gazebo>
+  <joint name="base_front_left_axle_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.135 0.156 0.111"/>
+    <parent link="base_link"/>
+    <child link="p3at_front_left_axle"/>
+  </joint>
+
+  <link name="p3at_front_left_hub">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual name="front_left_hub">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="pioneer_geom">
+        <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/left_hubcap.dae"/>
+      </geometry>
+      <material name="HubcapYellow">
+        <color rgba="1.0 0.811 0.151 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="p3at_front_left_hub">
+    <material value="Gazebo/Yellow"/>
+  </gazebo>
+  <joint name="base_front_left_hub_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.041 0"/>
+    <parent link="p3at_front_left_axle"/>
+    <child link="p3at_front_left_hub"/>
+  </joint>
+
+  <link name="p3at_front_left_wheel">
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.012411765597" ixy="0" ixz="0" iyy="0.015218160428" iyz="0" izz="0.011763977943"/>
+    </inertial>
+    <visual name="front_left_wheel">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry name="pioneer_geom">
+        <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/wheel.dae"/>
+      </geometry>
+      <material name="WheelBlack">
+        <color rgba="0.117 0.117 0.117 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-1.57079635 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.075" radius="0.111"/>
+        </geometry>
+    </collision>
+  </link>
+  <gazebo reference="p3at_front_left_wheel">
+    <material value="Gazebo/Black"/>
+  </gazebo>
+  <joint name="p3at_front_left_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <anchor xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/> 
+    <parent link="p3at_front_left_hub"/>
+    <child link="p3at_front_left_wheel"/>
+    <limit effort="100" velocity="100"/>
+    <joint_properties damping="0.7"/>
+  </joint>
+
+
+  <gazebo reference="p3at_front_left_wheel">
+      <kp>10000000.0</kp> <!--contact stiffness-->
+      <kd>100.0</kd> <!--damping-->
+  </gazebo>
+
+  <gazebo>
+    <plugin
+      filename="gz-sim-diff-drive-system"
+      name="gz::sim::systems::DiffDrive">
+      <left_joint>p3at_front_left_wheel_joint</left_joint>
+      <left_joint>p3at_back_left_wheel_joint</left_joint>
+      <right_joint>p3at_back_right_wheel_joint</right_joint>
+      <right_joint>p3at_front_right_wheel_joint</right_joint>
+      <wheel_separation>0.630</wheel_separation>
+      <wheel_radius>0.111</wheel_radius>
+      <odom_publish_frequency>20</odom_publish_frequency>
+      <topic>cmd_vel</topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_link</child_frame_id>
+      <odom_topic>odom</odom_topic>
+      <tf_topic>tf</tf_topic>
+    </plugin>
+  </gazebo>
+
+<!-- Front Right Wheel -->
+<link name="p3at_front_right_axle">
+  <inertial>
+    <mass value="0.1"/>
+    <origin xyz="0 0 0"/>
+    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+  </inertial>
+  <visual name="front_right_axle">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry name="pioneer_geom">
+      <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/axle.dae"/>
+    </geometry>
+    <material name="AxleGrey">
+      <color rgba="0.5 0.5 0.5 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+  </collision>
+</link>
+<gazebo reference="p3at_front_right_axle">
+  <material value="Gazebo/Grey"/>
+</gazebo>
+<joint name="base_front_right_axle_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.135 -0.156 0.111"/>
+  <parent link="base_link"/>
+  <child link="p3at_front_right_axle"/>
+</joint>
+
+<link name="p3at_front_right_hub">
+  <inertial>
+    <mass value="0.1"/>
+    <origin xyz="0 0 0"/>
+    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+  </inertial>
+  <visual name="front_right_hub">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry name="pioneer_geom">
+      <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/right_hubcap.dae"/>
+    </geometry>
+    <material name="HubcapYellow">
+      <color rgba="1.0 0.811 0.151 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+  </collision>
+</link>
+<gazebo reference="p3at_front_right_hub">
+  <material value="Gazebo/Yellow"/>
+</gazebo>
+<joint name="base_front_right_hub_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0 -0.041 0"/>
+  <parent link="p3at_front_right_axle"/>
+  <child link="p3at_front_right_hub"/>
+</joint>
+
+<link name="p3at_front_right_wheel">
+  <inertial>
+    <mass value="0.5"/>
+    <origin xyz="0 0 0"/>
+    <inertia ixx="0.012411765597" ixy="0" ixz="0" iyy="0.015218160428" iyz="0" izz="0.011763977943"/>
+  </inertial>
+  <visual name="front_right_wheel">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry name="pioneer_geom">
+      <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/wheel.dae"/>
+    </geometry>
+    <material name="WheelBlack">
+      <color rgba="0.117 0.117 0.117 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="-1.57079635 0 0" xyz="0 0 0"/>
+    <geometry>
+      <cylinder length="0.075" radius="0.111"/>
+    </geometry>
+  </collision>
+</link>
+<gazebo reference="p3at_front_right_wheel">
+  <material value="Gazebo/Black"/>
+</gazebo>
+<joint name="p3at_front_right_wheel_joint" type="continuous">
+  <axis xyz="0 1 0"/>
+  <anchor xyz="0 0 0"/>
+  <origin rpy="0 0 0" xyz="0 0 0"/>
+  <parent link="p3at_front_right_hub"/>
+  <child link="p3at_front_right_wheel"/>
+  <limit effort="100" velocity="100"/>
+  <joint_properties damping="0.7"/>
+</joint>
+<gazebo reference="p3at_front_right_wheel">
+  <kp>10000000.0</kp>
+  <kd>100.0</kd>
+</gazebo>
+
+<!-- Back Left Wheel -->
+<link name="p3at_back_left_axle">
+  <inertial>
+    <mass value="0.1"/>
+    <origin xyz="0 0 0"/>
+    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+  </inertial>
+  <visual name="back_left_axle">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry name="pioneer_geom">
+      <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/axle.dae"/>
+    </geometry>
+    <material name="AxleGrey">
+      <color rgba="0.5 0.5 0.5 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+  </collision>
+</link>
+<gazebo reference="p3at_back_left_axle">
+  <material value="Gazebo/Grey"/>
+</gazebo>
+<joint name="base_back_left_axle_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.135 0.156 0.111"/>
+  <parent link="base_link"/>
+  <child link="p3at_back_left_axle"/>
+</joint>
+
+<link name="p3at_back_left_hub">
+  <inertial>
+    <mass value="0.1"/>
+    <origin xyz="0 0 0"/>
+    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+  </inertial>
+  <visual name="back_left_hub">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry name="pioneer_geom">
+      <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/left_hubcap.dae"/>
+    </geometry>
+    <material name="HubcapYellow">
+      <color rgba="1.0 0.811 0.151 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+  </collision>
+</link>
+<gazebo reference="p3at_back_left_hub">
+  <material value="Gazebo/Yellow"/>
+</gazebo>
+<joint name="base_back_left_hub_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0 0.041 0"/>
+  <parent link="p3at_back_left_axle"/>
+  <child link="p3at_back_left_hub"/>
+</joint>
+
+<link name="p3at_back_left_wheel">
+  <inertial>
+    <mass value="0.5"/>
+    <origin xyz="0 0 0"/>
+    <inertia ixx="0.012411765597" ixy="0" ixz="0" iyy="0.015218160428" iyz="0" izz="0.011763977943"/>
+  </inertial>
+  <visual name="back_left_wheel">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry name="pioneer_geom">
+      <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/wheel.dae"/>
+    </geometry>
+    <material name="WheelBlack">
+      <color rgba="0.117 0.117 0.117 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="-1.57079635 0 0" xyz="0 0 0"/>
+    <geometry>
+      <cylinder length="0.075" radius="0.111"/>
+    </geometry>
+  </collision>
+</link>
+<gazebo reference="p3at_back_left_wheel">
+  <material value="Gazebo/Black"/>
+</gazebo>
+<joint name="p3at_back_left_wheel_joint" type="continuous">
+  <axis xyz="0 1 0"/>
+  <anchor xyz="0 0 0"/>
+  <origin rpy="0 0 0" xyz="0 0 0"/>
+  <parent link="p3at_back_left_hub"/>
+  <child link="p3at_back_left_wheel"/>
+  <limit effort="100" velocity="100"/>
+  <joint_properties damping="0.7"/>
+</joint>
+<gazebo reference="p3at_back_left_wheel">
+  <kp>10000000.0</kp>
+  <kd>100.0</kd>
+</gazebo>
+
+<!-- Back Right Wheel -->
+<link name="p3at_back_right_axle">
+  <inertial>
+    <mass value="0.1"/>
+    <origin xyz="0 0 0"/>
+    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+  </inertial>
+  <visual name="back_right_axle">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry name="pioneer_geom">
+      <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/axle.dae"/>
+    </geometry>
+    <material name="AxleGrey">
+      <color rgba="0.5 0.5 0.5 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+  </collision>
+</link>
+<gazebo reference="p3at_back_right_axle">
+  <material value="Gazebo/Grey"/>
+</gazebo>
+<joint name="base_back_right_axle_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.135 -0.156 0.111"/>
+  <parent link="base_link"/>
+  <child link="p3at_back_right_axle"/>
+</joint>
+
+<link name="p3at_back_right_hub">
+  <inertial>
+    <mass value="0.1"/>
+    <origin xyz="0 0 0"/>
+    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+  </inertial>
+  <visual name="back_right_hub">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry name="pioneer_geom">
+      <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/right_hubcap.dae"/>
+    </geometry>
+    <material name="HubcapYellow">
+      <color rgba="1.0 0.811 0.151 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+  </collision>
+</link>
+<gazebo reference="p3at_back_right_hub">
+  <material value="Gazebo/Yellow"/>
+</gazebo>
+<joint name="base_back_right_hub_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0 -0.041 0"/>
+  <parent link="p3at_back_right_axle"/>
+  <child link="p3at_back_right_hub"/>
+</joint>
+
+<link name="p3at_back_right_wheel">
+  <inertial>
+    <mass value="0.5"/>
+    <origin xyz="0 0 0"/>
+    <inertia ixx="0.012411765597" ixy="0" ixz="0" iyy="0.015218160428" iyz="0" izz="0.011763977943"/>
+  </inertial>
+  <visual name="back_right_wheel">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry name="pioneer_geom">
+      <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/p3at_meshes/wheel.dae"/>
+    </geometry>
+    <material name="WheelBlack">
+      <color rgba="0.117 0.117 0.117 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="-1.57079635 0 0" xyz="0 0 0"/>
+    <geometry>
+      <cylinder length="0.075" radius="0.111"/>
+    </geometry>
+  </collision>
+</link>
+<gazebo reference="p3at_back_right_wheel">
+  <material value="Gazebo/Black"/>
+</gazebo>
+<joint name="p3at_back_right_wheel_joint" type="continuous">
+  <axis xyz="0 1 0"/>
+  <anchor xyz="0 0 0"/>
+  <origin rpy="0 0 0" xyz="0 0 0"/>
+  <parent link="p3at_back_right_hub"/>
+  <child link="p3at_back_right_wheel"/>
+  <limit effort="100" velocity="100"/>
+  <joint_properties damping="0.7"/>
+</joint>
+<gazebo reference="p3at_back_right_wheel">
+  <kp>10000000.0</kp>
+  <kd>100.0</kd>
+</gazebo>
+
+  <!-- lidar -->
+<joint name="laser_joint" type="fixed">
+  <parent link="chassis" />
+  <child link="laser_frame" />
+  <origin xyz="0.2 0 0.104" rpy="0 0 0"/>
+</joint>
+
+<link name="laser_frame">
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+  </collision>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/> 
+    <geometry>
+      <mesh filename="/home/winton/ros2_ws/src/pioneer_robot/resources/meshes/hokuyo1.dae"/>
+    </geometry>
+  </visual>
+  <inertial>
+    <mass value="1e-5" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+  </inertial>
+</link>
+
+<gazebo reference="laser_frame">
+  <sensor name="laser" type="gpu_lidar">
+    <topic>scan</topic>
+    <update_rate>10</update_rate>
+    <frame>laser_frame</frame>
+    <gz_frame_id>laser_frame</gz_frame_id>
+    <lidar>
+      <scan>
+        <horizontal>
+          <samples>640</samples>
+          <min_angle>-1.5708</min_angle>
+          <max_angle>1.5708</max_angle>
+        </horizontal>
+      </scan>
+      <range>
+        <min>0.05</min>
+        <max>10.0</max>
+      </range>
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+      </noise>
+    </lidar>
+    <always_on>1</always_on>
+  </sensor>
+</gazebo>
+
+  <!-- camera -->
+<joint name="cam_joint" type="fixed">
+  <parent link="chassis" />
+  <child link="cam_frame" />
+  <origin xyz="0.24 0 0.084" rpy="0 0 0"/>
+</joint>
+
+<link name="cam_frame">
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/> 
+    <geometry>
+      <box size="0.01 0.05 0.01"/>
+    </geometry>
+    <material name="greenCam">
+      <color rgba="0 1.0 0 1.0"/>
+    </material>
+  </visual>
+</link>
+
+<joint name="cam_optical_joint" type="fixed">
+  <parent link="cam_frame" />
+  <child link="cam_optical_link" />
+  <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
+</joint>
+
+<link name="cam_optical_link"></link>
+
+<gazebo reference="cam_frame">
+  <sensor name="camera" type="camera">
+    <pose>0 0 0 0 0 0</pose>
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <visualize>true</visualize>
+    <topic>camera/image</topic>
+    <frame>cam_optical_link</frame>
+    <camera>
+      <horizontal_fov>1.089</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.1</near>
+        <far>20.0</far>
+      </clip>
+    </camera>
+  </sensor>
+</gazebo>
+
+  <!-- IMU -->
+<gazebo reference="base_link">
+  <sensor name="imu_sensor" type="imu">
+    <always_on>true</always_on>
+    <update_rate>100</update_rate>
+    <visualize>false</visualize>
+    <topic>imu</topic>
+    <frame>base_link</frame>
+    <imu>
+      <angular_velocity>
+        <x>
+          <noise type="gaussian">
+            <mean>0</mean>
+            <stddev>0.0002</stddev>
+          </noise>
+        </x>
+        <y>
+          <noise type="gaussian">
+            <mean>0</mean>
+            <stddev>0.0002</stddev>
+          </noise>
+        </y>
+        <z>
+          <noise type="gaussian">
+            <mean>0</mean>
+            <stddev>0.0002</stddev>
+          </noise>
+        </z>
+      </angular_velocity>
+      <linear_acceleration>
+        <x>
+          <noise type="gaussian">
+            <mean>0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </x>
+        <y>
+          <noise type="gaussian">
+            <mean>0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </y>
+        <z>
+          <noise type="gaussian">
+            <mean>0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </z>
+      </linear_acceleration>
+    </imu>
+  </sensor>
+</gazebo>
+
+
+  <!-- GPS / NavSat -->
+  <gazebo reference="base_link">
+    <sensor name="navsat_sensor" type="navsat">
+      <always_on>true</always_on>
+      <update_rate>1</update_rate>
+      <topic>/gps/fix</topic>
+      <gz_frame_id>base_link</gz_frame_id>
+      <navsat>
+        <position_sensing>
+          <horizontal>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1.5</stddev>
+            </noise>
+          </horizontal>
+          <vertical>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1.5</stddev>
+            </noise>
+          </vertical>
+        </position_sensing>
+      </navsat>
+    </sensor>
+  </gazebo>
+
+  </robot>
+  

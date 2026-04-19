@@ -1,0 +1,23 @@
+[0.466s] Invoking command in '/workspace/AUTO4508-Team-2/src/pioneer_robot': PYTHONPATH=/workspace/AUTO4508-Team-2/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/AUTO4508-Team-2/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pioneer_robot build --build-base /workspace/AUTO4508-Team-2/build/pioneer_robot/build install --record /workspace/AUTO4508-Team-2/build/pioneer_robot/install.log --single-version-externally-managed install_data
+[0.619s] running egg_info
+[0.629s] writing ../../build/pioneer_robot/pioneer_robot.egg-info/PKG-INFO
+[0.629s] writing dependency_links to ../../build/pioneer_robot/pioneer_robot.egg-info/dependency_links.txt
+[0.629s] writing entry points to ../../build/pioneer_robot/pioneer_robot.egg-info/entry_points.txt
+[0.629s] writing requirements to ../../build/pioneer_robot/pioneer_robot.egg-info/requires.txt
+[0.629s] writing top-level names to ../../build/pioneer_robot/pioneer_robot.egg-info/top_level.txt
+[0.649s] reading manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'
+[0.650s] writing manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'
+[0.650s] running build
+[0.650s] running build_py
+[0.650s] running install
+[0.655s] running install_lib
+[0.665s] running install_data
+[0.665s] copying resources/launch/joy_teleop_launch.py -> /workspace/AUTO4508-Team-2/install/pioneer_robot/share/pioneer_robot/resources/launch
+[0.665s] running install_egg_info
+[0.676s] removing '/workspace/AUTO4508-Team-2/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info' (and everything under it)
+[0.676s] Copying ../../build/pioneer_robot/pioneer_robot.egg-info to /workspace/AUTO4508-Team-2/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info
+[0.677s] running install_scripts
+[0.744s] Installing gps_waypoint_follower script to /workspace/AUTO4508-Team-2/install/pioneer_robot/lib/pioneer_robot
+[0.744s] Installing waypoint_follower script to /workspace/AUTO4508-Team-2/install/pioneer_robot/lib/pioneer_robot
+[0.744s] writing list of installed files to '/workspace/AUTO4508-Team-2/build/pioneer_robot/install.log'
+[0.762s] Invoked command in '/workspace/AUTO4508-Team-2/src/pioneer_robot' returned '0': PYTHONPATH=/workspace/AUTO4508-Team-2/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/AUTO4508-Team-2/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pioneer_robot build --build-base /workspace/AUTO4508-Team-2/build/pioneer_robot/build install --record /workspace/AUTO4508-Team-2/build/pioneer_robot/install.log --single-version-externally-managed install_data

@@ -1,0 +1,5 @@
+gmake[2]: *** No rule to make target '/opt/ros/jazzy/lib/libfastcdr.so.2.2.5', needed by 'ariaNode'.  Stop.
+gmake[2]: *** Waiting for unfinished jobs....
+[ 50%] [32mBuilding CXX object CMakeFiles/ariaNode.dir/src/ariaNode.cpp.o[0m
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/ariaNode.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

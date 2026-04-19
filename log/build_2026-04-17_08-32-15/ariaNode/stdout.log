@@ -1,0 +1,21 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/ariaNode.dir/src/ariaNode.cpp.o[0m
+[100%] [32m[1mLinking CXX executable ariaNode[0m
+[100%] Built target ariaNode
+-- Install configuration: ""
+-- Installing: /workspace/install/ariaNode/lib/ariaNode/ariaNode
+-- Set non-toolchain portion of runtime path of "/workspace/install/ariaNode/lib/ariaNode/ariaNode" to ""
+-- Up-to-date: /workspace/install/ariaNode/share/ament_index/resource_index/package_run_dependencies/ariaNode
+-- Up-to-date: /workspace/install/ariaNode/share/ament_index/resource_index/parent_prefix_path/ariaNode
+-- Up-to-date: /workspace/install/ariaNode/share/ariaNode/environment/ament_prefix_path.sh
+-- Up-to-date: /workspace/install/ariaNode/share/ariaNode/environment/ament_prefix_path.dsv
+-- Up-to-date: /workspace/install/ariaNode/share/ariaNode/environment/path.sh
+-- Up-to-date: /workspace/install/ariaNode/share/ariaNode/environment/path.dsv
+-- Up-to-date: /workspace/install/ariaNode/share/ariaNode/local_setup.bash
+-- Up-to-date: /workspace/install/ariaNode/share/ariaNode/local_setup.sh
+-- Up-to-date: /workspace/install/ariaNode/share/ariaNode/local_setup.zsh
+-- Up-to-date: /workspace/install/ariaNode/share/ariaNode/local_setup.dsv
+-- Installing: /workspace/install/ariaNode/share/ariaNode/package.dsv
+-- Up-to-date: /workspace/install/ariaNode/share/ament_index/resource_index/packages/ariaNode
+-- Up-to-date: /workspace/install/ariaNode/share/ariaNode/cmake/ariaNodeConfig.cmake
+-- Up-to-date: /workspace/install/ariaNode/share/ariaNode/cmake/ariaNodeConfig-version.cmake
+-- Up-to-date: /workspace/install/ariaNode/share/ariaNode/package.xml

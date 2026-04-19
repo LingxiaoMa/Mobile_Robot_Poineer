@@ -1,0 +1,29 @@
+[18.354s] Invoking command in '/home/winton/ros2_ws/src/pioneer_robot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/winton/ros2_ws/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pioneer_robot build --build-base /home/winton/ros2_ws/build/pioneer_robot/build install --record /home/winton/ros2_ws/build/pioneer_robot/install.log --single-version-externally-managed install_data
+[18.496s] running egg_info
+[18.505s] writing ../../build/pioneer_robot/pioneer_robot.egg-info/PKG-INFO
+[18.505s] writing dependency_links to ../../build/pioneer_robot/pioneer_robot.egg-info/dependency_links.txt
+[18.505s] writing entry points to ../../build/pioneer_robot/pioneer_robot.egg-info/entry_points.txt
+[18.505s] writing requirements to ../../build/pioneer_robot/pioneer_robot.egg-info/requires.txt
+[18.505s] writing top-level names to ../../build/pioneer_robot/pioneer_robot.egg-info/top_level.txt
+[18.524s] reading manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'
+[18.525s] writing manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'
+[18.525s] running build
+[18.525s] running build_py
+[18.525s] copying pioneer_robot/waypoint_follower.py -> /home/winton/ros2_ws/build/pioneer_robot/build/lib/pioneer_robot
+[18.525s] running install
+[18.529s] running install_lib
+[18.538s] copying /home/winton/ros2_ws/build/pioneer_robot/build/lib/pioneer_robot/waypoint_follower.py -> /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot
+[18.539s] byte-compiling /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/waypoint_follower.py to waypoint_follower.cpython-312.pyc
+[18.540s] running install_data
+[18.540s] copying resources/launch/pioneer_launch.py -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch
+[18.540s] copying resources/launch/sdf.launch.py -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch
+[18.540s] copying resources/worlds/basic_urdf.sdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/worlds
+[18.540s] copying resources/robots/pioneer.urdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/robots
+[18.541s] copying config/nav2_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+[18.541s] running install_egg_info
+[18.552s] removing '/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info' (and everything under it)
+[18.552s] Copying ../../build/pioneer_robot/pioneer_robot.egg-info to /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info
+[18.553s] running install_scripts
+[18.620s] Installing waypoint_follower script to /home/winton/ros2_ws/install/pioneer_robot/lib/pioneer_robot
+[18.621s] writing list of installed files to '/home/winton/ros2_ws/build/pioneer_robot/install.log'
+[18.636s] Invoked command in '/home/winton/ros2_ws/src/pioneer_robot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/winton/ros2_ws/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pioneer_robot build --build-base /home/winton/ros2_ws/build/pioneer_robot/build install --record /home/winton/ros2_ws/build/pioneer_robot/install.log --single-version-externally-managed install_data

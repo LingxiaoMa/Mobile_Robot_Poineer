@@ -1,0 +1,5 @@
+[0.009s] Invoking command in '/workspace/AUTO4508-Team-2/build/ariaNode': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspace/AUTO4508-Team-2/build/ariaNode -- -j8 -l8
+[0.048s] gmake[2]: *** No rule to make target '/opt/ros/jazzy/lib/libfastcdr.so.2.2.5', needed by 'ariaNode'.  Stop.
+[0.049s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/ariaNode.dir/all] Error 2
+[0.049s] gmake: *** [Makefile:146: all] Error 2
+[0.135s] Invoked command in '/workspace/AUTO4508-Team-2/build/ariaNode' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspace/AUTO4508-Team-2/build/ariaNode -- -j8 -l8

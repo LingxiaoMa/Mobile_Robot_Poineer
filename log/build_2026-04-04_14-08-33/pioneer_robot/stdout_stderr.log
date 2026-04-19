@@ -1,0 +1,75 @@
+running develop
+running egg_info
+writing pioneer_robot.egg-info/PKG-INFO
+writing dependency_links to pioneer_robot.egg-info/dependency_links.txt
+writing entry points to pioneer_robot.egg-info/entry_points.txt
+writing requirements to pioneer_robot.egg-info/requires.txt
+writing top-level names to pioneer_robot.egg-info/top_level.txt
+reading manifest file 'pioneer_robot.egg-info/SOURCES.txt'
+writing manifest file 'pioneer_robot.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer-robot.egg-link (link to .)
+Installing gps_waypoint_follower script to /home/winton/ros2_ws/install/pioneer_robot/lib/pioneer_robot
+Installing waypoint_follower script to /home/winton/ros2_ws/install/pioneer_robot/lib/pioneer_robot
+
+Installed /home/winton/ros2_ws/build/pioneer_robot
+running symlink_data
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resource/pioneer_robot -> /home/winton/ros2_ws/install/pioneer_robot/share/ament_index/resource_index/packages
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/package.xml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/launch/pioneer_launch.py -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/launch/sdf.launch.py -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/worlds/basic_urdf.sdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/worlds
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/robots/pioneer.urdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/robots
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_armControl_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/wheel.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/bucket.obj -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/cone.obj -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/tampa2_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/left_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/left_hubcap_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/hokuyo1.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/kinect.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/tampa4_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/tampa3_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_base_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/kinect.tga -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_base_mesh2.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/tv_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_kinect_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/back_sonar_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/chassis.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/arm_control_box_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/axle.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/back_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/front_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/right_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/Coordinates -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_depth_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/hokuyo.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/tampa1_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/top.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_monitor_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/hokuyo_convex.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/right_hubcap.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/axle.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/wheel.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/left_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/wheel.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/front_sonar.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/back_sonar.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/top.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/chassis.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/chassis.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/axle.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/back_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/front_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/right_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/Coordinates -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/top.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/left_hubcap.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/config/slam_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/config/navsat_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/config/nav2_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/config/slam_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/config/navsat_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+symbolically linking /home/winton/ros2_ws/build/pioneer_robot/config/nav2_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config

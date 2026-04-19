@@ -1,0 +1,17 @@
+navsat_transform_node:
+  ros__parameters:
+    frequency: 10.0
+    delay: 3.0
+    # Perth, WA magnetic declination ~11.7 degrees East = 0.204 radians
+    magnetic_declination_radians: 0.204
+    yaw_offset: 0.0
+    # ignore GPS altitude — only use x/y for transforms
+    zero_altitude: true
+    broadcast_utm_transform: false
+    publish_filtered_gps: false
+    use_odometry_yaw: false
+    # Hardcode the datum so fromLL works immediately without waiting for
+    # GPS+odometry correlation. World origin (0,0) = UWA coordinates.
+    # Format: [latitude_deg, longitude_deg, yaw_rad]
+    wait_for_datum: false
+    datum: [-31.9805, 115.8193, 0.0]

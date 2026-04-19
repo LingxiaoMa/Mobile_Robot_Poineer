@@ -1,0 +1,610 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+    <world name="pioneer_world">
+        <physics name="1ms" type="ignored">
+            <max_step_size>0.001</max_step_size>
+            <real_time_factor>1.0</real_time_factor>
+        </physics>
+        <plugin
+            filename="libgz-sim-physics-system"
+            name="gz::sim::systems::Physics">
+        </plugin>
+        <plugin
+            filename="libgz-sim-user-commands-system"
+            name="gz::sim::systems::UserCommands">
+        </plugin>
+        <plugin
+            filename="libgz-sim-scene-broadcaster-system"
+            name="gz::sim::systems::SceneBroadcaster">
+        </plugin>
+        <plugin filename="libgz-sim-imu-system"
+                name="gz::sim::systems::Imu">
+        </plugin>
+        <plugin filename="libgz-sim-sensors-system.so"
+                name="gz::sim::systems::Sensors">
+        </plugin>
+        <plugin filename="libgz-sim-contact-system"
+                name="gz::sim::systems::Contact">
+        </plugin>
+        <plugin filename="libgz-sim-navsat-system"
+                name="gz::sim::systems::NavSat">
+        </plugin>
+        <spherical_coordinates>
+            <surface_model>EARTH_WGS84</surface_model>
+            <world_frame_orientation>ENU</world_frame_orientation>
+            <latitude_deg>-31.9805</latitude_deg>
+            <longitude_deg>115.8193</longitude_deg>
+            <elevation>20.0</elevation>
+            <heading_deg>0</heading_deg>
+        </spherical_coordinates>
+        <light type="directional" name="sun">
+            <cast_shadows>true</cast_shadows>
+            <pose>0 0 10 0 0 0</pose>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+            <attenuation>
+                <range>1000</range>
+                <constant>0.9</constant>
+                <linear>0.01</linear>
+                <quadratic>0.001</quadratic>
+            </attenuation>
+            <direction>-0.5 0.1 -0.9</direction>
+        </light>
+
+        <!-- grass -->
+        <model name="ground_plane">
+            <static>true</static>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <box><size>28 20 0.1</size></box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box><size>28 20 0.1</size></box>
+                    </geometry>
+                    <material>
+                        <ambient>0.2 0.5 0.2 1</ambient>
+                        <diffuse>0.2 0.6 0.2 1</diffuse>
+                        <specular>0.1 0.3 0.1 1</specular>
+                    </material>
+                </visual>
+            </link>
+        </model>
+        
+        <!-- top wall -->
+        <model name="wall_n">
+            <static>true</static>
+            <pose>0 10 0.5 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry><box><size>20 0.2 1.0</size></box></geometry>
+                    <material>
+                        <ambient>1.0 1.0 1.0 1</ambient>
+                        <diffuse>1.0 1.0 1.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry><box><size>20 0.2 1.0</size></box></geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- bottom wall -->
+        <model name="wall_s">
+            <static>true</static>
+            <pose>0 -10 0.5 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry><box><size>20 0.2 1.0</size></box></geometry>
+                    <material>
+                        <ambient>1.0 1.0 1.0 1</ambient>
+                        <diffuse>1.0 1.0 1.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry><box><size>20 0.2 1.0</size></box></geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- left wall -->
+        <model name="wall_e">
+            <static>true</static>
+            <pose>14 0 0.5 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry><box><size>0.2 12 1.0</size></box></geometry>
+                    <material>
+                        <ambient>1.0 1.0 1.0 1</ambient>
+                        <diffuse>1.0 1.0 1.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry><box><size>0.2 12 1.0</size></box></geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- right wall -->
+        <model name="wall_w">
+            <static>true</static>
+            <pose>-14 0 0.5 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry><box><size>0.2 12 1.0</size></box></geometry>
+                    <material>
+                        <ambient>1.0 1.0 1.0 1</ambient>
+                        <diffuse>1.0 1.0 1.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry><box><size>0.2 12 1.0</size></box></geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- lhs-top wall -->
+        <model name="wall_ne">
+            <static>true</static>
+            <pose>12 8 0.5 0 0 -0.785</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry><box><size>5.66 0.2 1.0</size></box></geometry>
+                    <material>
+                        <ambient>1.0 1.0 1.0 1</ambient>
+                        <diffuse>1.0 1.0 1.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry><box><size>5.66 0.2 1.0</size></box></geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- rhs-top wall -->
+        <model name="wall_nw">
+            <static>true</static>
+            <pose>-12 8 0.5 0 0 0.785</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry><box><size>5.66 0.2 1.0</size></box></geometry>
+                    <material>
+                        <ambient>1.0 1.0 1.0 1</ambient>
+                        <diffuse>1.0 1.0 1.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry><box><size>5.66 0.2 1.0</size></box></geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- lhs-bottom wall -->
+        <model name="wall_se">
+            <static>true</static>
+            <pose>12 -8 0.5 0 0 0.785</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry><box><size>5.66 0.2 1.0</size></box></geometry>
+                    <material>
+                        <ambient>1.0 1.0 1.0 1</ambient>
+                        <diffuse>1.0 1.0 1.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry><box><size>5.66 0.2 1.0</size></box></geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- rhs-bottom wall -->
+        <model name="wall_sw">
+            <static>true</static>
+            <pose>-12 -8 0.5 0 0 -0.785</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry><box><size>5.66 0.2 1.0</size></box></geometry>
+                    <material>
+                        <ambient>1.0 1.0 1.0 1</ambient>
+                        <diffuse>1.0 1.0 1.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry><box><size>5.66 0.2 1.0</size></box></geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- cone 1 -->
+        <model name="cone1">
+            <static>true</static>
+            <pose>3 3 0.05 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/cone.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>1.0 0.35 0.0 1</ambient>
+                        <diffuse>1.0 0.35 0.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.3</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- cone 2 -->
+        <model name="cone2">
+            <static>true</static>
+            <pose>-4 6 0.05 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/cone.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>1.0 0.35 0.0 1</ambient>
+                        <diffuse>1.0 0.35 0.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.3</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- cone 3 -->
+        <model name="cone3">
+            <static>true</static>
+            <pose>6 -4 0.05 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/cone.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>1.0 0.35 0.0 1</ambient>
+                        <diffuse>1.0 0.35 0.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.3</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- cone 4 -->
+        <model name="cone4">
+            <static>true</static>
+            <pose>-6 -3 0.05 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/cone.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>1.0 0.35 0.0 1</ambient>
+                        <diffuse>1.0 0.35 0.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.3</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- bucket 1 -->
+        <model name="bucket1">
+            <static>true</static>
+            <pose>-8 2 0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/bucket.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0.5 0.3 0.1 1</ambient>
+                        <diffuse>0.5 0.3 0.1 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.4</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- bucket 2 -->
+        <model name="bucket2">
+            <static>true</static>
+            <pose>7 5 0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/bucket.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0.5 0.3 0.1 1</ambient>
+                        <diffuse>0.5 0.3 0.1 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.4</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- cone 5 -->
+        <model name="cone5">
+            <static>true</static>
+            <pose>5 6 0.05 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/cone.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>1.0 0.35 0.0 1</ambient>
+                        <diffuse>1.0 0.35 0.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.3</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- cone 6 -->
+        <model name="cone6">
+            <static>true</static>
+            <pose>7 -7 0.05 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/cone.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>1.0 0.35 0.0 1</ambient>
+                        <diffuse>1.0 0.35 0.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.3</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- cone 7 -->
+        <model name="cone7">
+            <static>true</static>
+            <pose>-7 -7 0.05 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/cone.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>1.0 0.35 0.0 1</ambient>
+                        <diffuse>1.0 0.35 0.0 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.3</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- bucket 4 -->
+        <model name="bucket4">
+            <static>true</static>
+            <pose>11 0 0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/bucket.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0.5 0.3 0.1 1</ambient>
+                        <diffuse>0.5 0.3 0.1 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.4</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- bucket 5 -->
+        <model name="bucket5">
+            <static>true</static>
+            <pose>-11 0 0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/bucket.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0.5 0.3 0.1 1</ambient>
+                        <diffuse>0.5 0.3 0.1 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.4</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- bucket 6 -->
+        <model name="bucket6">
+            <static>true</static>
+            <pose>-3 5 0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/bucket.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0.5 0.3 0.1 1</ambient>
+                        <diffuse>0.5 0.3 0.1 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.4</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- bucket 3 -->
+        <model name="bucket3">
+            <static>true</static>
+            <pose>2 -5 0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <pose>0 0 0 1.5708 0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>file:///home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/bucket.obj</uri>
+                            <scale>0.001 0.001 0.001</scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0.5 0.3 0.1 1</ambient>
+                        <diffuse>0.5 0.3 0.1 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.4</radius>
+                            <length>1.0</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+    </world>
+</sdf>

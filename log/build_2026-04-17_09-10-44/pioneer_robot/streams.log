@@ -1,0 +1,28 @@
+[0.515s] Invoking command in '/workspace/src/pioneer_robot': PYTHONPATH=/workspace/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pioneer_robot build --build-base /workspace/build/pioneer_robot/build install --record /workspace/build/pioneer_robot/install.log --single-version-externally-managed install_data
+[0.682s] running egg_info
+[0.692s] writing ../../build/pioneer_robot/pioneer_robot.egg-info/PKG-INFO
+[0.692s] writing dependency_links to ../../build/pioneer_robot/pioneer_robot.egg-info/dependency_links.txt
+[0.692s] writing entry points to ../../build/pioneer_robot/pioneer_robot.egg-info/entry_points.txt
+[0.692s] writing requirements to ../../build/pioneer_robot/pioneer_robot.egg-info/requires.txt
+[0.693s] writing top-level names to ../../build/pioneer_robot/pioneer_robot.egg-info/top_level.txt
+[0.714s] reading manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'
+[0.715s] writing manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'
+[0.715s] running build
+[0.715s] running build_py
+[0.715s] copying pioneer_robot/local_controller.py -> /workspace/build/pioneer_robot/build/lib/pioneer_robot
+[0.716s] running install
+[0.721s] running install_lib
+[0.731s] copying /workspace/build/pioneer_robot/build/lib/pioneer_robot/local_controller.py -> /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot
+[0.732s] byte-compiling /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/local_controller.py to local_controller.cpython-312.pyc
+[0.735s] running install_data
+[0.736s] running install_egg_info
+[0.747s] removing '/workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info' (and everything under it)
+[0.747s] Copying ../../build/pioneer_robot/pioneer_robot.egg-info to /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info
+[0.748s] running install_scripts
+[0.824s] Installing cone_detector script to /workspace/install/pioneer_robot/lib/pioneer_robot
+[0.825s] Installing gps_waypoint_follower script to /workspace/install/pioneer_robot/lib/pioneer_robot
+[0.825s] Installing joy_controller script to /workspace/install/pioneer_robot/lib/pioneer_robot
+[0.825s] Installing local_controller script to /workspace/install/pioneer_robot/lib/pioneer_robot
+[0.825s] Installing waypoint_follower script to /workspace/install/pioneer_robot/lib/pioneer_robot
+[0.825s] writing list of installed files to '/workspace/build/pioneer_robot/install.log'
+[0.847s] Invoked command in '/workspace/src/pioneer_robot' returned '0': PYTHONPATH=/workspace/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pioneer_robot build --build-base /workspace/build/pioneer_robot/build install --record /workspace/build/pioneer_robot/install.log --single-version-externally-managed install_data

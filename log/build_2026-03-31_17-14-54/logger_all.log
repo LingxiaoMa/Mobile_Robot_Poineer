@@ -1,0 +1,185 @@
+[0.069s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'pioneer_robot', '--symlink-install']
+[0.069s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=22, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['pioneer_robot'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x725f452e50a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x725f45318410>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x725f45318410>>)
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.096s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/winton/ros2_ws'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/pioneer_robot) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/pioneer_robot) by extension 'ignore'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/pioneer_robot) by extension 'ignore_ament_install'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/pioneer_robot) by extensions ['colcon_pkg']
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/pioneer_robot) by extension 'colcon_pkg'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/pioneer_robot) by extensions ['colcon_meta']
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/pioneer_robot) by extension 'colcon_meta'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/pioneer_robot) by extensions ['ros']
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/pioneer_robot) by extension 'ros'
+[0.118s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pioneer_robot' with type 'ros.ament_python' and name 'pioneer_robot'
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.130s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.130s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.131s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/winton/ros2_ws/install
+[0.132s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 390 installed packages in /opt/ros/jazzy
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'pioneer_robot' build argument 'cmake_args' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'pioneer_robot' build argument 'cmake_target' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'pioneer_robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'pioneer_robot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'pioneer_robot' build argument 'cmake_clean_first' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'pioneer_robot' build argument 'cmake_force_configure' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'pioneer_robot' build argument 'ament_cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'pioneer_robot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'pioneer_robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.166s] DEBUG:colcon.colcon_core.verb:Building package 'pioneer_robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/winton/ros2_ws/build/pioneer_robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/winton/ros2_ws/install/pioneer_robot', 'merge_install': False, 'path': '/home/winton/ros2_ws/src/pioneer_robot', 'symlink_install': True, 'test_result_base': None}
+[0.166s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.166s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.167s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/winton/ros2_ws/src/pioneer_robot' with build type 'ament_python'
+[0.167s] Level 1:colcon.colcon_core.shell:create_environment_hook('pioneer_robot', 'ament_prefix_path')
+[0.168s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.168s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/hook/ament_prefix_path.ps1'
+[0.168s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/hook/ament_prefix_path.dsv'
+[0.168s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/hook/ament_prefix_path.sh'
+[0.169s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.169s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.331s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/winton/ros2_ws/src/pioneer_robot'
+[0.331s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.331s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.710s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/ament_index/resource_index/packages/pioneer_robot
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/package.xml
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch/pioneer_launch.py
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch/sdf.launch.py
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/worlds/basic_urdf.sdf
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/robots/pioneer.urdf
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/suporte_armControl_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/wheel.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/tampa2_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/left_hubcap.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/left_hubcap_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/hokuyo1.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/kinect.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/tampa4_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/tampa3_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/suporte_base_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/kinect.tga
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/suporte_base_mesh2.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/tv_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/suporte_kinect_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/back_sonar_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/chassis.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/arm_control_box_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/axle.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/back_sonar.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/front_sonar.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/right_hubcap.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/Coordinates
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/suporte_depth_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/hokuyo.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/tampa1_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/top.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/suporte_monitor_mesh.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/hokuyo_convex.stl
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/right_hubcap.stl
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/axle.stl
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/wheel.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/left_hubcap.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/wheel.stl
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/front_sonar.stl
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/back_sonar.stl
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/top.stl
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/chassis.stl
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/chassis.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/axle.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/back_sonar.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/front_sonar.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/right_hubcap.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/Coordinates
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/top.dae
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/left_hubcap.stl
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config/slam_params.yaml
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config/nav2_params.yaml
+[0.711s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/winton/ros2_ws/install/pioneer_robot/lib/pioneer_robot/waypoint_follower
+[0.714s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/winton/ros2_ws/build/pioneer_robot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/winton/ros2_ws/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/winton/ros2_ws/build/pioneer_robot/build --no-deps symlink_data --force
+[1.124s] Level 1:colcon.colcon_core.shell:create_environment_hook('pioneer_robot', 'pythonpath_develop')
+[1.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/winton/ros2_ws/build/pioneer_robot/share/pioneer_robot/hook/pythonpath_develop.ps1'
+[1.125s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/winton/ros2_ws/build/pioneer_robot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/winton/ros2_ws/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/winton/ros2_ws/build/pioneer_robot/build --no-deps symlink_data --force
+[1.126s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/winton/ros2_ws/build/pioneer_robot/share/pioneer_robot/hook/pythonpath_develop.dsv'
+[1.126s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/winton/ros2_ws/build/pioneer_robot/share/pioneer_robot/hook/pythonpath_develop.sh'
+[1.128s] Level 1:colcon.colcon_core.environment:checking '/home/winton/ros2_ws/install/pioneer_robot' for CMake module files
+[1.128s] Level 1:colcon.colcon_core.environment:checking '/home/winton/ros2_ws/install/pioneer_robot' for CMake config files
+[1.129s] Level 1:colcon.colcon_core.environment:checking '/home/winton/ros2_ws/install/pioneer_robot/lib'
+[1.129s] Level 1:colcon.colcon_core.environment:checking '/home/winton/ros2_ws/install/pioneer_robot/bin'
+[1.129s] Level 1:colcon.colcon_core.environment:checking '/home/winton/ros2_ws/install/pioneer_robot/lib/pkgconfig/pioneer_robot.pc'
+[1.129s] Level 1:colcon.colcon_core.environment:checking '/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages'
+[1.129s] Level 1:colcon.colcon_core.shell:create_environment_hook('pioneer_robot', 'pythonpath')
+[1.129s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/hook/pythonpath.ps1'
+[1.130s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/hook/pythonpath.dsv'
+[1.130s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/hook/pythonpath.sh'
+[1.130s] Level 1:colcon.colcon_core.environment:checking '/home/winton/ros2_ws/install/pioneer_robot/bin'
+[1.130s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pioneer_robot)
+[1.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/package.ps1'
+[1.131s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/package.dsv'
+[1.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/package.sh'
+[1.132s] INFO:colcon.colcon_core.shell:Creating package script '/home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/package.bash'
+[1.132s] INFO:colcon.colcon_core.shell:Creating package script '/home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/package.zsh'
+[1.132s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/winton/ros2_ws/install/pioneer_robot/share/colcon-core/packages/pioneer_robot)
+[1.132s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.133s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.133s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.133s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.136s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.136s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.136s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.147s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.147s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/winton/ros2_ws/install/local_setup.ps1'
+[1.147s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/winton/ros2_ws/install/_local_setup_util_ps1.py'
+[1.148s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/winton/ros2_ws/install/setup.ps1'
+[1.149s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/winton/ros2_ws/install/local_setup.sh'
+[1.149s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/winton/ros2_ws/install/_local_setup_util_sh.py'
+[1.149s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/winton/ros2_ws/install/setup.sh'
+[1.150s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/winton/ros2_ws/install/local_setup.bash'
+[1.150s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/winton/ros2_ws/install/setup.bash'
+[1.151s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/winton/ros2_ws/install/local_setup.zsh'
+[1.151s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/winton/ros2_ws/install/setup.zsh'

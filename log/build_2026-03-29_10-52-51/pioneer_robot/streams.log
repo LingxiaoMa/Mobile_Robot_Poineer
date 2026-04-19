@@ -1,0 +1,41 @@
+[0.581s] Invoking command in '/home/winton/ros2_ws/src/pioneer_robot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/winton/ros2_ws/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pioneer_robot build --build-base /home/winton/ros2_ws/build/pioneer_robot/build install --record /home/winton/ros2_ws/build/pioneer_robot/install.log --single-version-externally-managed install_data
+[0.726s] running egg_info
+[0.737s] writing ../../build/pioneer_robot/pioneer_robot.egg-info/PKG-INFO
+[0.737s] writing dependency_links to ../../build/pioneer_robot/pioneer_robot.egg-info/dependency_links.txt
+[0.737s] writing requirements to ../../build/pioneer_robot/pioneer_robot.egg-info/requires.txt
+[0.737s] writing top-level names to ../../build/pioneer_robot/pioneer_robot.egg-info/top_level.txt
+[0.757s] reading manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'
+[0.758s] writing manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'
+[0.758s] running build
+[0.758s] running build_py
+[0.758s] running install
+[0.762s] running install_lib
+[0.772s] running install_data
+[0.772s] creating /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources
+[0.772s] creating /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch
+[0.772s] copying resources/launch/sdf.launch.py -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch
+[0.772s] creating /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/worlds
+[0.772s] copying resources/worlds/basic_urdf.sdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/worlds
+[0.772s] creating /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/robots
+[0.772s] copying resources/robots/pioneer.urdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/robots
+[0.772s] creating /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.772s] copying resources/meshes/suporte_armControl_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.773s] copying resources/meshes/wheel.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.773s] copying resources/meshes/tampa2_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.773s] copying resources/meshes/left_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.773s] copying resources/meshes/left_hubcap_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.774s] copying resources/meshes/hokuyo1.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.774s] copying resources/meshes/kinect.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.776s] copying resources/meshes/tampa4_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.776s] copying resources/meshes/tampa3_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.776s] copying resources/meshes/suporte_base_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.777s] copying resources/meshes/kinect.tga -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.777s] copying resources/meshes/suporte_base_mesh2.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.779s] copying resources/meshes/tv_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.779s] copying resources/meshes/suporte_kinect_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.779s] copying resources/meshes/back_sonar_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.780s] copying resources/meshes/chassis.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.780s] copying resources/meshes/arm_control_box_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.780s] copying resources/meshes/axle.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.781s] error: can't copy 'resources/meshes/p3at_meshes': doesn't exist or not a regular file
+[0.794s] Invoked command in '/home/winton/ros2_ws/src/pioneer_robot' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/winton/ros2_ws/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pioneer_robot build --build-base /home/winton/ros2_ws/build/pioneer_robot/build install --record /home/winton/ros2_ws/build/pioneer_robot/install.log --single-version-externally-managed install_data

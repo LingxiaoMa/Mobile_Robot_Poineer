@@ -1,0 +1,152 @@
+[0.000000] (-) TimerEvent: {}
+[0.000128] (-) JobUnselected: {'identifier': 'pioneer_robot'}
+[0.000228] (ariaNode) JobQueued: {'identifier': 'ariaNode', 'dependencies': OrderedDict()}
+[0.000378] (ariaNode) JobStarted: {'identifier': 'ariaNode'}
+[0.006445] (ariaNode) JobProgress: {'identifier': 'ariaNode', 'progress': 'cmake'}
+[0.006741] (ariaNode) Command: {'cmd': ['/usr/bin/cmake', '/workspace/src/ariaNode', '-DCMAKE_INSTALL_PREFIX=/workspace/install/ariaNode'], 'cwd': '/workspace/build/ariaNode', 'env': OrderedDict({'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'pioneer5-NUC11PHi7', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', 'IGN_GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/workspace/install/pioneer_robot:/workspace/install/ariaNode:/opt/ros/jazzy', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/ariaNode', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/install/pioneer_robot/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/ariaNode:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/workspace/install/pioneer_robot:/opt/ros/jazzy'}), 'shell': False}
+[0.048092] (ariaNode) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.095472] (ariaNode) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.099892] (-) TimerEvent: {}
+[0.105971] (ariaNode) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.183324] (ariaNode) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.190559] (ariaNode) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.190714] (ariaNode) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.191020] (ariaNode) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.197096] (ariaNode) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199929] (-) TimerEvent: {}
+[0.265491] (ariaNode) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.271913] (ariaNode) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.272168] (ariaNode) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.272483] (ariaNode) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.276318] (ariaNode) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.300047] (-) TimerEvent: {}
+[0.369704] (ariaNode) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.400216] (-) TimerEvent: {}
+[0.457468] (ariaNode) StdoutLine: {'line': b'-- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.497719] (ariaNode) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.500308] (-) TimerEvent: {}
+[0.511579] (ariaNode) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.526033] (ariaNode) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.542320] (ariaNode) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.600421] (-) TimerEvent: {}
+[0.606624] (ariaNode) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.609937] (ariaNode) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.671138] (ariaNode) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[0.685713] (ariaNode) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[0.700127] (ariaNode) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.700476] (-) TimerEvent: {}
+[0.763028] (ariaNode) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.7 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[0.788087] (ariaNode) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.7 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[0.800662] (-) TimerEvent: {}
+[0.810214] (ariaNode) StdoutLine: {'line': b'-- Found tf2_ros: 0.36.20 (/opt/ros/jazzy/share/tf2_ros/cmake)\n'}
+[0.900774] (-) TimerEvent: {}
+[0.922620] (ariaNode) StderrLine: {'line': b'\x1b[0mThe root directory is /opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules\x1b[0m\n'}
+[0.925096] (ariaNode) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[0.975206] (ariaNode) StderrLine: {'line': b'WARNING: Package name "ariaNode" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.\n'}
+[1.000895] (-) TimerEvent: {}
+[1.007393] (ariaNode) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.007519] (ariaNode) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.007572] (ariaNode) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.008099] (ariaNode) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.008870] (ariaNode) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.008937] (ariaNode) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.009586] (ariaNode) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.011247] (ariaNode) StdoutLine: {'line': b'-- Configuring done (1.0s)\n'}
+[1.020624] (ariaNode) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.023180] (ariaNode) StdoutLine: {'line': b'-- Build files have been written to: /workspace/build/ariaNode\n'}
+[1.030199] (ariaNode) CommandEnded: {'returncode': 0}
+[1.030619] (ariaNode) JobProgress: {'identifier': 'ariaNode', 'progress': 'build'}
+[1.031021] (ariaNode) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/build/ariaNode', '--', '-j8', '-l8'], 'cwd': '/workspace/build/ariaNode', 'env': OrderedDict({'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'pioneer5-NUC11PHi7', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', 'IGN_GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/workspace/install/pioneer_robot:/workspace/install/ariaNode:/opt/ros/jazzy', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/ariaNode', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/install/pioneer_robot/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/ariaNode:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/workspace/install/pioneer_robot:/opt/ros/jazzy'}), 'shell': False}
+[1.067933] (ariaNode) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ariaNode.dir/src/ariaNode.cpp.o\x1b[0m\n'}
+[1.100956] (-) TimerEvent: {}
+[1.201175] (-) TimerEvent: {}
+[1.301488] (-) TimerEvent: {}
+[1.401781] (-) TimerEvent: {}
+[1.502121] (-) TimerEvent: {}
+[1.602394] (-) TimerEvent: {}
+[1.702754] (-) TimerEvent: {}
+[1.802966] (-) TimerEvent: {}
+[1.903190] (-) TimerEvent: {}
+[2.003438] (-) TimerEvent: {}
+[2.103685] (-) TimerEvent: {}
+[2.204010] (-) TimerEvent: {}
+[2.304238] (-) TimerEvent: {}
+[2.404557] (-) TimerEvent: {}
+[2.504809] (-) TimerEvent: {}
+[2.605057] (-) TimerEvent: {}
+[2.705374] (-) TimerEvent: {}
+[2.805675] (-) TimerEvent: {}
+[2.905986] (-) TimerEvent: {}
+[3.006257] (-) TimerEvent: {}
+[3.106574] (-) TimerEvent: {}
+[3.206906] (-) TimerEvent: {}
+[3.307226] (-) TimerEvent: {}
+[3.407474] (-) TimerEvent: {}
+[3.507736] (-) TimerEvent: {}
+[3.608066] (-) TimerEvent: {}
+[3.708327] (-) TimerEvent: {}
+[3.808590] (-) TimerEvent: {}
+[3.908826] (-) TimerEvent: {}
+[4.009077] (-) TimerEvent: {}
+[4.109375] (-) TimerEvent: {}
+[4.209685] (-) TimerEvent: {}
+[4.309956] (-) TimerEvent: {}
+[4.410293] (-) TimerEvent: {}
+[4.510599] (-) TimerEvent: {}
+[4.610832] (-) TimerEvent: {}
+[4.711099] (-) TimerEvent: {}
+[4.811348] (-) TimerEvent: {}
+[4.911635] (-) TimerEvent: {}
+[5.011882] (-) TimerEvent: {}
+[5.112131] (-) TimerEvent: {}
+[5.212432] (-) TimerEvent: {}
+[5.312763] (-) TimerEvent: {}
+[5.413088] (-) TimerEvent: {}
+[5.513390] (-) TimerEvent: {}
+[5.613689] (-) TimerEvent: {}
+[5.713918] (-) TimerEvent: {}
+[5.814166] (-) TimerEvent: {}
+[5.914373] (-) TimerEvent: {}
+[6.014635] (-) TimerEvent: {}
+[6.114863] (-) TimerEvent: {}
+[6.215094] (-) TimerEvent: {}
+[6.315324] (-) TimerEvent: {}
+[6.415563] (-) TimerEvent: {}
+[6.515867] (-) TimerEvent: {}
+[6.616081] (-) TimerEvent: {}
+[6.716379] (-) TimerEvent: {}
+[6.816682] (-) TimerEvent: {}
+[6.917008] (-) TimerEvent: {}
+[7.017336] (-) TimerEvent: {}
+[7.117632] (-) TimerEvent: {}
+[7.217877] (-) TimerEvent: {}
+[7.318215] (-) TimerEvent: {}
+[7.326175] (ariaNode) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ariaNode\x1b[0m\n'}
+[7.418327] (-) TimerEvent: {}
+[7.518577] (-) TimerEvent: {}
+[7.603618] (ariaNode) StdoutLine: {'line': b'[100%] Built target ariaNode\n'}
+[7.611881] (ariaNode) CommandEnded: {'returncode': 0}
+[7.612266] (ariaNode) JobProgress: {'identifier': 'ariaNode', 'progress': 'install'}
+[7.618575] (ariaNode) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/build/ariaNode'], 'cwd': '/workspace/build/ariaNode', 'env': OrderedDict({'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'pioneer5-NUC11PHi7', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', 'IGN_GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/workspace/install/pioneer_robot:/workspace/install/ariaNode:/opt/ros/jazzy', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/ariaNode', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/install/pioneer_robot/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/ariaNode:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/workspace/install/pioneer_robot:/opt/ros/jazzy'}), 'shell': False}
+[7.618987] (-) TimerEvent: {}
+[7.624372] (ariaNode) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.624551] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/lib/ariaNode/ariaNode\n'}
+[7.626961] (ariaNode) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/workspace/install/ariaNode/lib/ariaNode/ariaNode" to ""\n'}
+[7.627099] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ament_index/resource_index/package_run_dependencies/ariaNode\n'}
+[7.627209] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ament_index/resource_index/parent_prefix_path/ariaNode\n'}
+[7.627381] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/environment/ament_prefix_path.sh\n'}
+[7.627497] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/environment/ament_prefix_path.dsv\n'}
+[7.627609] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/environment/path.sh\n'}
+[7.627718] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/environment/path.dsv\n'}
+[7.627827] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/local_setup.bash\n'}
+[7.627950] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/local_setup.sh\n'}
+[7.628054] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/local_setup.zsh\n'}
+[7.628169] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/local_setup.dsv\n'}
+[7.628278] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/package.dsv\n'}
+[7.628415] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ament_index/resource_index/packages/ariaNode\n'}
+[7.628549] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/cmake/ariaNodeConfig.cmake\n'}
+[7.628659] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/cmake/ariaNodeConfig-version.cmake\n'}
+[7.628765] (ariaNode) StdoutLine: {'line': b'-- Installing: /workspace/install/ariaNode/share/ariaNode/package.xml\n'}
+[7.629808] (ariaNode) CommandEnded: {'returncode': 0}
+[7.641355] (ariaNode) JobEnded: {'identifier': 'ariaNode', 'rc': 0}
+[7.641818] (-) EventReactorShutdown: {}

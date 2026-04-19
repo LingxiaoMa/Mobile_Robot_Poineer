@@ -1,0 +1,72 @@
+[0.547s] Invoking command in '/home/winton/ros2_ws/build/pioneer_robot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/winton/ros2_ws/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/winton/ros2_ws/build/pioneer_robot/build --no-deps symlink_data --force
+[0.758s] running develop
+[0.877s] running egg_info
+[0.888s] writing pioneer_robot.egg-info/PKG-INFO
+[0.888s] writing dependency_links to pioneer_robot.egg-info/dependency_links.txt
+[0.888s] writing entry points to pioneer_robot.egg-info/entry_points.txt
+[0.889s] writing requirements to pioneer_robot.egg-info/requires.txt
+[0.889s] writing top-level names to pioneer_robot.egg-info/top_level.txt
+[0.914s] reading manifest file 'pioneer_robot.egg-info/SOURCES.txt'
+[0.915s] writing manifest file 'pioneer_robot.egg-info/SOURCES.txt'
+[0.930s] running build_ext
+[0.930s] Creating /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer-robot.egg-link (link to .)
+[0.930s] Installing waypoint_follower script to /home/winton/ros2_ws/install/pioneer_robot/lib/pioneer_robot
+[0.930s] 
+[0.930s] Installed /home/winton/ros2_ws/build/pioneer_robot
+[0.931s] running symlink_data
+[0.931s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resource/pioneer_robot -> /home/winton/ros2_ws/install/pioneer_robot/share/ament_index/resource_index/packages
+[0.931s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/package.xml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot
+[0.931s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/launch/pioneer_launch.py -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch
+[0.931s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/launch/sdf.launch.py -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch
+[0.931s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/worlds/basic_urdf.sdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/worlds
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/robots/pioneer.urdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/robots
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_armControl_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/wheel.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/tampa2_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/left_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/left_hubcap_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/hokuyo1.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/kinect.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/tampa4_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/tampa3_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_base_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.932s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/kinect.tga -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_base_mesh2.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/tv_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_kinect_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/back_sonar_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/chassis.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/arm_control_box_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/axle.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/back_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/front_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/right_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/Coordinates -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_depth_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/hokuyo.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/tampa1_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.933s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/top.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/suporte_monitor_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/hokuyo_convex.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/right_hubcap.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/axle.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/wheel.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/left_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/wheel.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/front_sonar.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/back_sonar.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/top.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/chassis.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/chassis.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/axle.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/back_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/front_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/right_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/Coordinates -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/top.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/resources/meshes/p3at_meshes/left_hubcap.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/config/slam_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/config/nav2_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/config/slam_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+[0.934s] symbolically linking /home/winton/ros2_ws/build/pioneer_robot/config/nav2_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+[0.958s] Invoked command in '/home/winton/ros2_ws/build/pioneer_robot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/winton/ros2_ws/build/pioneer_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/winton/ros2_ws/build/pioneer_robot/build --no-deps symlink_data --force

@@ -1,0 +1,8 @@
+source;share/ariaNode/hook/cmake_prefix_path.ps1
+source;share/ariaNode/hook/cmake_prefix_path.dsv
+source;share/ariaNode/hook/cmake_prefix_path.sh
+source;share/ariaNode/local_setup.bash
+source;share/ariaNode/local_setup.dsv
+source;share/ariaNode/local_setup.ps1
+source;share/ariaNode/local_setup.sh
+source;share/ariaNode/local_setup.zsh

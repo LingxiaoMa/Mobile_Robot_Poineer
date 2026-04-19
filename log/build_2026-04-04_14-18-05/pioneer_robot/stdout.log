@@ -1,0 +1,88 @@
+running develop
+Removing /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer-robot.egg-link (link to .)
+running egg_info
+writing ../../build/pioneer_robot/pioneer_robot.egg-info/PKG-INFO
+writing dependency_links to ../../build/pioneer_robot/pioneer_robot.egg-info/dependency_links.txt
+writing entry points to ../../build/pioneer_robot/pioneer_robot.egg-info/entry_points.txt
+writing requirements to ../../build/pioneer_robot/pioneer_robot.egg-info/requires.txt
+writing top-level names to ../../build/pioneer_robot/pioneer_robot.egg-info/top_level.txt
+reading manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'
+writing manifest file '../../build/pioneer_robot/pioneer_robot.egg-info/SOURCES.txt'
+running build
+running build_py
+copying pioneer_robot/gps_waypoint_follower.py -> /home/winton/ros2_ws/build/pioneer_robot/build/lib/pioneer_robot
+running install
+running install_lib
+creating /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot
+copying /home/winton/ros2_ws/build/pioneer_robot/build/lib/pioneer_robot/__init__.py -> /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot
+copying /home/winton/ros2_ws/build/pioneer_robot/build/lib/pioneer_robot/gps_waypoint_follower.py -> /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot
+copying /home/winton/ros2_ws/build/pioneer_robot/build/lib/pioneer_robot/waypoint_follower.py -> /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot
+byte-compiling /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/gps_waypoint_follower.py to gps_waypoint_follower.cpython-312.pyc
+byte-compiling /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/waypoint_follower.py to waypoint_follower.cpython-312.pyc
+running install_data
+copying resource/pioneer_robot -> /home/winton/ros2_ws/install/pioneer_robot/share/ament_index/resource_index/packages
+copying package.xml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot
+copying resources/launch/pioneer_launch.py -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch
+copying resources/launch/sdf.launch.py -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/launch
+copying resources/worlds/basic_urdf.sdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/worlds
+copying resources/robots/pioneer.urdf -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/robots
+copying resources/meshes/suporte_armControl_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/wheel.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/bucket.obj -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/cone.obj -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/tampa2_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/left_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/left_hubcap_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/hokuyo1.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/kinect.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/tampa4_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/tampa3_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/suporte_base_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/kinect.tga -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/suporte_base_mesh2.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/tv_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/suporte_kinect_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/back_sonar_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/chassis.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/arm_control_box_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/axle.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/back_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/front_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/right_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/Coordinates -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/suporte_depth_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/hokuyo.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/tampa1_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/top.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/suporte_monitor_mesh.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/hokuyo_convex.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes
+copying resources/meshes/p3at_meshes/right_hubcap.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/axle.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/wheel.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/left_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/wheel.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/front_sonar.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/back_sonar.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/top.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/chassis.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/chassis.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/axle.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/back_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/front_sonar.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/right_hubcap.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/Coordinates -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/top.dae -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying resources/meshes/p3at_meshes/left_hubcap.stl -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes
+copying config/slam_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+copying config/navsat_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+copying config/nav2_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+copying config/slam_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+copying config/navsat_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+copying config/nav2_params.yaml -> /home/winton/ros2_ws/install/pioneer_robot/share/pioneer_robot/config
+running install_egg_info
+Copying ../../build/pioneer_robot/pioneer_robot.egg-info to /home/winton/ros2_ws/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info
+running install_scripts
+Installing gps_waypoint_follower script to /home/winton/ros2_ws/install/pioneer_robot/lib/pioneer_robot
+Installing waypoint_follower script to /home/winton/ros2_ws/install/pioneer_robot/lib/pioneer_robot
+writing list of installed files to '/home/winton/ros2_ws/build/pioneer_robot/install.log'
