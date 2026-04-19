@@ -2,11 +2,12 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
 from geometry_msgs.msg import Twist
+from std_msgs.msg import String
 
-# ── Button indices (adjust if your controller mapping differs) ──
-BUTTON_AUTO   = 0   # → autonomous mode
-BUTTON_MANUAL = 1   # → manual mode
-BUTTON_ESTOP  = 2   # → emergency stop + standby
+# ── Button indices (PS4: 0=X, 1=O, 2=Square, 3=Triangle) ──
+BUTTON_START_WP = 0   # X → start waypoint mission
+BUTTON_MANUAL   = 1   # O → cancel mission + manual mode
+BUTTON_ESTOP    = 2   # Square → emergency stop + standby
 
 # ── Joystick axes for manual drive ──
 LINEAR_AXIS   = 1   # left stick Y
@@ -26,16 +27,17 @@ class MasterController(Node):
         self._state        = self.STANDBY
         self._prev_buttons = []
 
-        self._cmd_pub = self.create_publisher(Twist, '/cmd_vel', 10)
+        self._cmd_pub     = self.create_publisher(Twist,  '/cmd_vel',        10)
+        self._mission_pub = self.create_publisher(String, '/mission_control', 10)
 
         self.create_subscription(Joy,   '/joy',          self._joy_cb,  10)
         self.create_subscription(Twist, '/cmd_vel_auto', self._auto_cb, 10)
 
         self.get_logger().info(
             'MasterController ready — STANDBY\n'
-            f'  Button {BUTTON_MANUAL} → MANUAL\n'
-            f'  Button {BUTTON_AUTO}   → AUTO\n'
-            f'  Button {BUTTON_ESTOP}  → ESTOP')
+            f'  Button {BUTTON_START_WP} (X)      → START waypoint mission\n'
+            f'  Button {BUTTON_MANUAL}   (O)      → CANCEL mission + MANUAL\n'
+            f'  Button {BUTTON_ESTOP}    (Square) → ESTOP')
 
     # ── Joy callback ────────────────────────────────────────────────
     def _joy_cb(self, msg: Joy):
@@ -57,17 +59,20 @@ class MasterController(Node):
         # Emergency stop — highest priority, works from any state
         if just_pressed(BUTTON_ESTOP):
             self._publish_stop()
+            self._publish_mission('CANCEL')
             self._state = self.STANDBY
             self.get_logger().info('ESTOP — robot stopped, back to STANDBY')
 
-        elif just_pressed(BUTTON_MANUAL) and self._state != self.MANUAL:
+        elif just_pressed(BUTTON_MANUAL):
+            self._publish_mission('CANCEL')
             self._state = self.MANUAL
-            self.get_logger().info('→ MANUAL mode')
+            self.get_logger().info('O pressed → CANCEL mission + MANUAL mode')
 
-        elif just_pressed(BUTTON_AUTO) and self._state != self.AUTO:
-            self._publish_stop()   # stop before handing over to local_controller
+        elif just_pressed(BUTTON_START_WP) and self._state != self.AUTO:
+            self._publish_stop()
+            self._publish_mission('START')
             self._state = self.AUTO
-            self.get_logger().info('→ AUTO mode')
+            self.get_logger().info('X pressed → START waypoint mission')
 
         # In MANUAL: publish cmd_vel from joystick axes
         if self._state == self.MANUAL:
@@ -86,6 +91,11 @@ class MasterController(Node):
 
     def _publish_stop(self):
         self._cmd_pub.publish(Twist())
+
+    def _publish_mission(self, cmd: str):
+        msg = String()
+        msg.data = cmd
+        self._mission_pub.publish(msg)
 
 
 def main(args=None):
