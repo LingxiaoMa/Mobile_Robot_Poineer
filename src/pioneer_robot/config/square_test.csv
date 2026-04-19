@@ -1,0 +1,14 @@
+# 1m 正方形测试路径 — 相对坐标
+# name, rel_x_m, rel_y_m, yaw_deg
+# rel_x > 0 = 前进, rel_y > 0 = 左转, yaw_deg = 相对起始朝向的偏转角（逆时针）
+#
+#   (0,1) ←── corner_3
+#     |                 |
+#  corner_4          corner_2
+#     |                 |
+#  start(0,0) ──→ corner_1(1,0)
+#
+corner_1,  1.0,  0.0,   0.0
+corner_2,  1.0,  1.0,  90.0
+corner_3,  0.0,  1.0, 180.0
+corner_4,  0.0,  0.0, 270.0

@@ -24,9 +24,7 @@ setup(
         (os.path.join('share', package_name, 'resources', 'meshes', 'p3at_meshes'),
             [f for f in glob('resources/meshes/p3at_meshes/*') if os.path.isfile(f)]),
         (os.path.join('share', package_name, 'config'),
-            glob('config/*.yaml')),
-        (os.path.join('share', package_name, 'config'),
-            glob('config/*.yaml')),
+            glob('config/*.yaml') + glob('config/*.csv')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -44,6 +42,7 @@ setup(
         'console_scripts': [
             'waypoint_follower = pioneer_robot.waypoint_follower:main',
             'gps_waypoint_follower = pioneer_robot.gps_waypoint_follower:main',
+            'relative_waypoint_follower = pioneer_robot.relative_waypoint_follower:main',
             'joy_controller = pioneer_robot.joy_controller:main',
             'cone_detector = pioneer_robot.cone_detector:main',
             'local_controller = pioneer_robot.local_controller:main',
