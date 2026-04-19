@@ -47,7 +47,10 @@ setup(
             'joy_controller = pioneer_robot.joy_controller:main',
             'cone_detector = pioneer_robot.cone_detector:main',
             'local_controller = pioneer_robot.local_controller:main',
+            'elastic_controller = pioneer_robot.elastic_controller:main',
+            'goal_relay = pioneer_robot.goal_relay:main',
             'oak_driver_node = pioneer_robot.oak_driver_node:main',
+            'scan_visualizer = pioneer_robot.scan_visualizer:main',
         ],
     },
 )

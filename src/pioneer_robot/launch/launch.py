@@ -14,6 +14,24 @@ def generate_launch_description():
         'spatial-launch.py'
     )
 
+    nav2_launch = os.path.join(
+        get_package_share_directory('nav2_bringup'),
+        'launch',
+        'navigation_launch.py'
+    )
+
+    nav2_params = os.path.join(
+        get_package_share_directory('pioneer_robot'),
+        'config',
+        'nav2_params.yaml'
+    )
+
+    ekf_params = os.path.join(
+        get_package_share_directory('pioneer_robot'),
+        'config',
+        'ekf_params.yaml'
+    )
+
     return LaunchDescription([
 
         # DDS
@@ -23,8 +41,6 @@ def generate_launch_description():
         ),
 
         # 1. Pioneer robot driver
-        # export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-        # ros2 run ariaNode ariaNode -rp /dev/ttyUSB0
         Node(
             package='ariaNode',
             executable='ariaNode',
@@ -34,11 +50,6 @@ def generate_launch_description():
         ),
 
         # 2. SICK lidar
-        # ros2 run sick_scan_xd sick_generic_caller --ros-args \
-        #   -p scanner_type:=sick_tim_7xx \
-        #   -p hostname:=192.168.0.1 \
-        #   -p use_binary_protocol:=true \
-        #   --remap sick_tim_7xx/scan:=/scan
         Node(
             package='sick_scan_xd',
             executable='sick_generic_caller',
@@ -55,7 +66,6 @@ def generate_launch_description():
         ),
 
         # 3. Joystick
-        # ros2 run joy joy_node
         Node(
             package='joy',
             executable='joy_node',
@@ -63,8 +73,7 @@ def generate_launch_description():
             output='screen'
         ),
 
-        # 4. Main controller
-        # ros2 run pioneer_robot joy_controller
+        # 4. Joystick controller (teleop override)
         Node(
             package='pioneer_robot',
             executable='joy_controller',
@@ -73,10 +82,6 @@ def generate_launch_description():
         ),
 
         # 5. OAK-D driver
-        # ros2 run pioneer_robot oak_driver_node
-        # topics:
-        # /oak/rgb/image_raw
-        # /oak/stereo/image_raw
         Node(
             package='pioneer_robot',
             executable='oak_driver_node',
@@ -84,18 +89,12 @@ def generate_launch_description():
             output='screen'
         ),
 
-        # 6. IMU
-        # ros2 launch phidgets_spatial spatial-launch.py
-        # topic:
-        # /imu/data_raw
+        # 6. IMU — publishes /imu/data_raw
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(phidgets_launch)
         ),
 
         # 7. GPS
-        # ros2 run nmea_navsat_driver nmea_serial_driver --ros-args -p port:=/dev/ttyACM0 -p baud:=9600
-        # topic:
-        # /fix
         Node(
             package='nmea_navsat_driver',
             executable='nmea_serial_driver',
@@ -107,18 +106,38 @@ def generate_launch_description():
             }]
         ),
 
-        # 8. Local controller
-        # ros2 run pioneer_robot local_controller
+        # 8. EKF — fuses /odom + /imu/data_raw → /odometry/filtered
         Node(
-            package='pioneer_robot',
-            executable='local_controller',
-            name='local_controller',
+            package='robot_localization',
+            executable='ekf_node',
+            name='ekf_filter_node',
             output='screen',
-            parameters=[{'use_dwa': False}]
+            parameters=[ekf_params],
         ),
 
-        # 9. Cone detector
-        # ros2 run pioneer_robot cone_detector
+        # 9. Nav2 navigation stack
+        #    Global planner : StraightLine (no map required)
+        #    Local controller: RegulatedPurePursuit + lidar costmap
+        #    cmd_vel pipeline: controller → velocity_smoother → collision_monitor → /cmd_vel
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(nav2_launch),
+            launch_arguments={
+                'params_file': nav2_params,
+                'use_sim_time': 'false',
+            }.items()
+        ),
+
+        # 10. Goal relay — converts /move_relative (Point) → NavigateToPose action
+        #     x, y = metres relative to robot start position
+        #     z    = final yaw offset in degrees (0 = keep start heading)
+        Node(
+            package='pioneer_robot',
+            executable='goal_relay',
+            name='goal_relay',
+            output='screen',
+        ),
+
+        # 11. Cone detector
         Node(
             package='pioneer_robot',
             executable='cone_detector',
