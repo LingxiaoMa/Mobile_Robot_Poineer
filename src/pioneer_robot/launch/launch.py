@@ -14,12 +14,6 @@ def generate_launch_description():
         'spatial-launch.py'
     )
 
-    nav2_launch = os.path.join(
-        get_package_share_directory('nav2_bringup'),
-        'launch',
-        'navigation_launch.py'
-    )
-
     nav2_params = os.path.join(
         get_package_share_directory('pioneer_robot'),
         'config',
@@ -50,6 +44,8 @@ def generate_launch_description():
         ),
 
         # 2. SICK lidar
+        # tf_base_frame_id: cloud 挂在 base_link 下（默认是 map，会产生孤立树）
+        # tf_base_lidar_xyz_rpy: 安装位置 + yaw=-1.5708 修正 90° 安装偏转
         Node(
             package='sick_scan_xd',
             executable='sick_generic_caller',
@@ -59,19 +55,14 @@ def generate_launch_description():
                 'scanner_type': 'sick_tim_7xx',
                 'hostname': '192.168.0.1',
                 'use_binary_protocol': True,
+                'tf_base_frame_id': 'base_link',
+                'tf_base_lidar_xyz_rpy': '0.20 0.0 0.104 0.0 0.0 -1.5708',
             }],
-            remappings=[
-                ('sick_tim_7xx/scan', '/scan')
-            ]
+            remappings=[('sick_tim_7xx/scan', '/scan')]
         ),
 
         # 3. Joystick
-        Node(
-            package='joy',
-            executable='joy_node',
-            name='joy_node',
-            output='screen'
-        ),
+        Node(package='joy', executable='joy_node', name='joy_node', output='screen'),
 
         # 4. Joystick controller (teleop override)
         Node(
@@ -100,13 +91,10 @@ def generate_launch_description():
             executable='nmea_serial_driver',
             name='nmea_serial_driver',
             output='screen',
-            parameters=[{
-                'port': '/dev/ttyACM0',
-                'baud': 9600,
-            }]
+            parameters=[{'port': '/dev/ttyACM0', 'baud': 9600}]
         ),
 
-        # 8. EKF — fuses /odom + /imu/data_raw → /odometry/filtered
+        # 8. EKF — /odom + /imu/data_raw → /odometry/filtered
         Node(
             package='robot_localization',
             executable='ekf_node',
@@ -115,21 +103,40 @@ def generate_launch_description():
             parameters=[ekf_params],
         ),
 
-        # 9. Nav2 navigation stack
-        #    Global planner : StraightLine (no map required)
-        #    Local controller: RegulatedPurePursuit + lidar costmap
-        #    cmd_vel pipeline: controller → velocity_smoother → collision_monitor → /cmd_vel
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(nav2_launch),
-            launch_arguments={
-                'params_file': nav2_params,
-                'use_sim_time': 'false',
-            }.items()
+        # 9. Nav2 — 直接启动各节点，绕开 nav2_bringup 的 lifecycle_nodes 硬编码
+        #    (nav2_bringup/navigation_launch.py 在 Jazzy 中强制包含 docking_server/route_server，
+        #     这两个节点无法 configure 会卡住整个 autostart 链)
+        Node(package='nav2_controller',   executable='controller_server',  name='controller_server',  output='screen', parameters=[nav2_params]),
+        Node(package='nav2_smoother',     executable='smoother_server',    name='smoother_server',    output='screen', parameters=[nav2_params]),
+        Node(package='nav2_planner',      executable='planner_server',     name='planner_server',     output='screen', parameters=[nav2_params]),
+        Node(package='nav2_behaviors',    executable='behavior_server',    name='behavior_server',    output='screen', parameters=[nav2_params]),
+        Node(package='nav2_bt_navigator', executable='bt_navigator',       name='bt_navigator',       output='screen', parameters=[nav2_params]),
+        Node(package='nav2_waypoint_follower', executable='waypoint_follower', name='waypoint_follower', output='screen', parameters=[nav2_params]),
+        Node(package='nav2_velocity_smoother', executable='velocity_smoother', name='velocity_smoother', output='screen', parameters=[nav2_params]),
+        Node(package='nav2_collision_monitor', executable='collision_monitor', name='collision_monitor', output='screen', parameters=[nav2_params]),
+        Node(
+            package='nav2_lifecycle_manager',
+            executable='lifecycle_manager',
+            name='lifecycle_manager_navigation',
+            output='screen',
+            parameters=[{
+                'use_sim_time': False,
+                'autostart': True,
+                'bond_timeout': 4.0,
+                'node_names': [
+                    'controller_server',
+                    'smoother_server',
+                    'planner_server',
+                    'behavior_server',
+                    'bt_navigator',
+                    'waypoint_follower',
+                    'velocity_smoother',
+                    'collision_monitor',
+                ],
+            }],
         ),
 
-        # 10. Goal relay — converts /move_relative (Point) → NavigateToPose action
-        #     x, y = metres relative to robot start position
-        #     z    = final yaw offset in degrees (0 = keep start heading)
+        # 10. Goal relay — /move_relative (Point) → NavigateToPose action
         Node(
             package='pioneer_robot',
             executable='goal_relay',
