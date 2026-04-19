@@ -5,6 +5,7 @@
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/goal_relay.py
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/local_controller.py
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/oak_driver_node.py
+/workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/relative_waypoint_follower.py
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/cone_detector.py
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__init__.py
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/scan_visualizer.py
@@ -16,6 +17,7 @@
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/goal_relay.cpython-312.pyc
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/local_controller.cpython-312.pyc
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/oak_driver_node.cpython-312.pyc
+/workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/relative_waypoint_follower.cpython-312.pyc
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/cone_detector.cpython-312.pyc
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/__init__.cpython-312.pyc
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/scan_visualizer.cpython-312.pyc
@@ -77,6 +79,8 @@
 /workspace/install/pioneer_robot/share/pioneer_robot/config/slam_params.yaml
 /workspace/install/pioneer_robot/share/pioneer_robot/config/ekf_params.yaml
 /workspace/install/pioneer_robot/share/pioneer_robot/config/navsat_params.yaml
+/workspace/install/pioneer_robot/share/pioneer_robot/config/waypoints.csv
+/workspace/install/pioneer_robot/share/pioneer_robot/config/square_test.csv
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info/dependency_links.txt
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info/top_level.txt
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot-0.0.0-py3.12.egg-info/requires.txt
@@ -91,5 +95,6 @@
 /workspace/install/pioneer_robot/lib/pioneer_robot/joy_controller
 /workspace/install/pioneer_robot/lib/pioneer_robot/local_controller
 /workspace/install/pioneer_robot/lib/pioneer_robot/oak_driver_node
+/workspace/install/pioneer_robot/lib/pioneer_robot/relative_waypoint_follower
 /workspace/install/pioneer_robot/lib/pioneer_robot/scan_visualizer
 /workspace/install/pioneer_robot/lib/pioneer_robot/waypoint_follower

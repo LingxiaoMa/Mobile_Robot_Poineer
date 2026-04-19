@@ -6,5 +6,6 @@ gps_waypoint_follower = pioneer_robot.gps_waypoint_follower:main
 joy_controller = pioneer_robot.joy_controller:main
 local_controller = pioneer_robot.local_controller:main
 oak_driver_node = pioneer_robot.oak_driver_node:main
+relative_waypoint_follower = pioneer_robot.relative_waypoint_follower:main
 scan_visualizer = pioneer_robot.scan_visualizer:main
 waypoint_follower = pioneer_robot.waypoint_follower:main

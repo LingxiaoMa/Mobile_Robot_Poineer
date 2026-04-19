@@ -12,7 +12,9 @@ config/ekf_params.yaml
 config/nav2_params.yaml
 config/navsat_params.yaml
 config/slam_params.yaml
+config/square_test.csv
 config/teleop_config.yaml
+config/waypoints.csv
 launch/launch.py
 pioneer_robot/__init__.py
 pioneer_robot/cone_detector.py
@@ -23,6 +25,7 @@ pioneer_robot/joy_controller.py
 pioneer_robot/local_controller.py
 pioneer_robot/oak_driver_node.py
 pioneer_robot/phidgets_imu_node.py
+pioneer_robot/relative_waypoint_follower.py
 pioneer_robot/scan_visualizer.py
 pioneer_robot/waypoint_follower.py
 resource/pioneer_robot
