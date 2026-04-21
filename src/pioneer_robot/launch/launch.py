@@ -151,4 +151,12 @@ def generate_launch_description():
             name='cone_detector',
             output='screen'
         ),
+
+        # 12. Object detector (colour + shape + distance for unknown obstacles)
+        Node(
+            package='pioneer_robot',
+            executable='object_detector',
+            name='object_detector',
+            output='screen'
+        ),
     ])

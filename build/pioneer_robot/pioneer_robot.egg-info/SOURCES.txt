@@ -18,10 +18,13 @@ pioneer_robot/__init__.py
 pioneer_robot/cone_detector.py
 pioneer_robot/elastic_controller.py
 pioneer_robot/goal_relay.py
+pioneer_robot/gps_to_odom_printer.py
 pioneer_robot/gps_waypoint_follower.py
 pioneer_robot/joy_controller.py
 pioneer_robot/local_controller.py
 pioneer_robot/oak_driver_node.py
+pioneer_robot/object_detector.py
+pioneer_robot/odom_logger.py
 pioneer_robot/phidgets_imu_node.py
 pioneer_robot/scan_visualizer.py
 pioneer_robot/waypoint_follower.py

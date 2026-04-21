@@ -51,6 +51,11 @@ setup(
             'goal_relay = pioneer_robot.goal_relay:main',
             'oak_driver_node = pioneer_robot.oak_driver_node:main',
             'scan_visualizer = pioneer_robot.scan_visualizer:main',
+            'gps_logger = pioneer_robot.gps_logger:main',
+            'gps_to_odom_printer = pioneer_robot.gps_to_odom_printer:main',
+            'relative_waypoint_follower = pioneer_robot.relative_waypoint_follower:main',
+            'object_detector = pioneer_robot.object_detector:main',
+            'odom_logger = pioneer_robot.odom_logger:main',
         ],
     },
 )

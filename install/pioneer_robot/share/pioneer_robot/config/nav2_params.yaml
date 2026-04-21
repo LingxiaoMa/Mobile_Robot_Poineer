@@ -97,10 +97,10 @@ global_costmap:
       global_frame: odom
       robot_base_frame: base_link
       robot_radius: 0.3
-      resolution: 0.05
+      resolution: 0.2
       rolling_window: true
-      width: 20
-      height: 20
+      width: 200
+      height: 200
       track_unknown_space: false
       plugins: ["obstacle_layer", "inflation_layer"]
       obstacle_layer:
@@ -123,16 +123,17 @@ global_costmap:
         inflation_radius: 0.4
       always_send_full_costmap: true
 
-# Straight-line global planner — no map needed
 planner_server:
   ros__parameters:
     use_sim_time: false
     expected_planner_frequency: 20.0
     planners:
       - name: GridBased
-        type: nav2_straightline_planner/StraightLine
+        type: nav2_navfn_planner::NavfnPlanner
     GridBased:
-      interpolation_resolution: 0.1
+      tolerance: 0.5
+      use_astar: false
+      allow_unknown: true
 
 smoother_server:
   ros__parameters:
