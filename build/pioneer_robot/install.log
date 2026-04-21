@@ -1,5 +1,6 @@
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/joy_controller.py
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/elastic_controller.py
+/workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/gps_logger.py
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/waypoint_follower.py
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/gps_waypoint_follower.py
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/goal_relay.py
@@ -12,6 +13,7 @@
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/phidgets_imu_node.py
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/joy_controller.cpython-312.pyc
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/elastic_controller.cpython-312.pyc
+/workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/gps_logger.cpython-312.pyc
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/waypoint_follower.cpython-312.pyc
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/gps_waypoint_follower.cpython-312.pyc
 /workspace/install/pioneer_robot/lib/python3.12/site-packages/pioneer_robot/__pycache__/goal_relay.cpython-312.pyc
@@ -25,6 +27,7 @@
 /workspace/install/pioneer_robot/share/ament_index/resource_index/packages/pioneer_robot
 /workspace/install/pioneer_robot/share/pioneer_robot/package.xml
 /workspace/install/pioneer_robot/share/pioneer_robot/launch/launch.py
+/workspace/install/pioneer_robot/share/pioneer_robot/launch/base_imu_ekf.py
 /workspace/install/pioneer_robot/share/pioneer_robot/resources/worlds/basic_urdf.sdf
 /workspace/install/pioneer_robot/share/pioneer_robot/resources/robots/pioneer.urdf
 /workspace/install/pioneer_robot/share/pioneer_robot/resources/meshes/top.dae
@@ -74,9 +77,12 @@
 /workspace/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/axle.stl
 /workspace/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/back_sonar.stl
 /workspace/install/pioneer_robot/share/pioneer_robot/resources/meshes/p3at_meshes/right_hubcap.stl
+/workspace/install/pioneer_robot/share/pioneer_robot/config/nav2_simple_params.yaml
+/workspace/install/pioneer_robot/share/pioneer_robot/config/navsat_transform_params.yaml
 /workspace/install/pioneer_robot/share/pioneer_robot/config/teleop_config.yaml
 /workspace/install/pioneer_robot/share/pioneer_robot/config/nav2_params.yaml
 /workspace/install/pioneer_robot/share/pioneer_robot/config/slam_params.yaml
+/workspace/install/pioneer_robot/share/pioneer_robot/config/ekf_global_params.yaml
 /workspace/install/pioneer_robot/share/pioneer_robot/config/ekf_params.yaml
 /workspace/install/pioneer_robot/share/pioneer_robot/config/navsat_params.yaml
 /workspace/install/pioneer_robot/share/pioneer_robot/config/waypoints.csv
@@ -91,6 +97,7 @@
 /workspace/install/pioneer_robot/lib/pioneer_robot/cone_detector
 /workspace/install/pioneer_robot/lib/pioneer_robot/elastic_controller
 /workspace/install/pioneer_robot/lib/pioneer_robot/goal_relay
+/workspace/install/pioneer_robot/lib/pioneer_robot/gps_logger
 /workspace/install/pioneer_robot/lib/pioneer_robot/gps_waypoint_follower
 /workspace/install/pioneer_robot/lib/pioneer_robot/joy_controller
 /workspace/install/pioneer_robot/lib/pioneer_robot/local_controller

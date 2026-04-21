@@ -50,6 +50,7 @@ setup(
             'goal_relay = pioneer_robot.goal_relay:main',
             'oak_driver_node = pioneer_robot.oak_driver_node:main',
             'scan_visualizer = pioneer_robot.scan_visualizer:main',
+            'gps_logger = pioneer_robot.gps_logger:main',
         ],
     },
 )

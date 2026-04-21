@@ -97,10 +97,10 @@ global_costmap:
       global_frame: odom
       robot_base_frame: base_link
       robot_radius: 0.3
-      resolution: 0.05
+      resolution: 0.2
       rolling_window: true
-      width: 20
-      height: 20
+      width: 200
+      height: 200
       track_unknown_space: false
       plugins: ["obstacle_layer", "inflation_layer"]
       obstacle_layer:

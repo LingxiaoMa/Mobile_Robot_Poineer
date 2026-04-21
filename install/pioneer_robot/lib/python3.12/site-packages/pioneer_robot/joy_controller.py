@@ -4,10 +4,12 @@ from sensor_msgs.msg import Joy
 from geometry_msgs.msg import Twist
 from std_msgs.msg import String
 
-# ── Button indices (PS4: 0=X, 1=O, 2=Square, 3=Triangle) ──
-BUTTON_START_WP = 0   # X → start waypoint mission
-BUTTON_MANUAL   = 1   # O → cancel mission + manual mode
-BUTTON_ESTOP    = 2   # Square → emergency stop + standby
+# ── Button indices (PS4: 0=X, 1=O, 2=Square) ──
+BUTTON_START_WP = 0   # X      → start GPS waypoint mission (needs L1+L2)
+BUTTON_MANUAL   = 1   # O      → cancel mission + manual mode
+BUTTON_ESTOP    = 2   # Square → emergency stop
+BUTTON_L1       = 9   # L1     } safety lock:
+BUTTON_L2       = 10  # L2     } both must be held to move
 
 # ── Joystick axes for manual drive ──
 LINEAR_AXIS   = 1   # left stick Y
@@ -35,46 +37,40 @@ class MasterController(Node):
 
         self.get_logger().info(
             'MasterController ready — STANDBY\n'
-            f'  Button {BUTTON_START_WP} (X)      → START waypoint mission\n'
-            f'  Button {BUTTON_MANUAL}   (O)      → CANCEL mission + MANUAL\n'
-            f'  Button {BUTTON_ESTOP}    (Square) → ESTOP')
+            f'  X({BUTTON_START_WP}) → START GPS mission\n'
+            f'  O({BUTTON_MANUAL})   → CANCEL mission + MANUAL\n'
+            f'  Square({BUTTON_ESTOP}) → ESTOP')
 
-    # ── Joy callback ────────────────────────────────────────────────
     def _joy_cb(self, msg: Joy):
         buttons = list(msg.buttons)
 
         while len(self._prev_buttons) < len(buttons):
             self._prev_buttons.append(0)
 
-        # Log any button state change for debugging
-        if buttons != self._prev_buttons[:len(buttons)]:
-            self.get_logger().info(
-                f'[DEBUG] buttons={buttons}  prev={self._prev_buttons[:len(buttons)]}  state={self._state}')
-
         def just_pressed(idx):
             return (idx < len(buttons)
                     and buttons[idx] == 1
                     and self._prev_buttons[idx] == 0)
 
-        # Emergency stop — highest priority, works from any state
+        # ── button events ──────────────────────────────────────────────
         if just_pressed(BUTTON_ESTOP):
             self._publish_stop()
             self._publish_mission('CANCEL')
             self._state = self.STANDBY
-            self.get_logger().info('ESTOP — robot stopped, back to STANDBY')
+            self.get_logger().info('ESTOP — stopped, STANDBY')
 
         elif just_pressed(BUTTON_MANUAL):
             self._publish_mission('CANCEL')
             self._state = self.MANUAL
-            self.get_logger().info('O pressed → CANCEL mission + MANUAL mode')
+            self.get_logger().info('O → CANCEL mission + MANUAL')
 
-        elif just_pressed(BUTTON_START_WP) and self._state != self.AUTO:
+        elif just_pressed(BUTTON_START_WP):
             self._publish_stop()
             self._publish_mission('START')
             self._state = self.AUTO
-            self.get_logger().info('X pressed → START waypoint mission')
+            self.get_logger().info('X → START GPS mission')
 
-        # In MANUAL: publish cmd_vel from joystick axes
+        # ── MANUAL: publish joystick axes ──────────────────────────────
         if self._state == self.MANUAL:
             twist = Twist()
             if len(msg.axes) > max(LINEAR_AXIS, ANGULAR_AXIS):
@@ -84,7 +80,6 @@ class MasterController(Node):
 
         self._prev_buttons = buttons
 
-    # ── Auto relay ──────────────────────────────────────────────────
     def _auto_cb(self, msg: Twist):
         if self._state == self.AUTO:
             self._cmd_pub.publish(msg)

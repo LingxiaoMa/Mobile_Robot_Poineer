@@ -1,18 +1,19 @@
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch_ros.actions import Node
+from launch_ros.actions import Node, ComposableNodeContainer
+from launch_ros.descriptions import ComposableNode
 
 from ament_index_python.packages import get_package_share_directory
 import os
 
 
 def generate_launch_description():
-    phidgets_launch = os.path.join(
-        get_package_share_directory('phidgets_spatial'),
-        'launch',
-        'spatial-launch.py'
-    )
+    # phidgets_launch = os.path.join(
+    #     get_package_share_directory('phidgets_spatial'),
+    #     'launch',
+    #     'spatial-launch.py'
+    # )
 
     nav2_params = os.path.join(
         get_package_share_directory('pioneer_robot'),
@@ -26,12 +27,33 @@ def generate_launch_description():
         'ekf_params.yaml'
     )
 
+    ekf_global_params = os.path.join(
+        get_package_share_directory('pioneer_robot'),
+        'config',
+        'ekf_global_params.yaml'
+    )
+
+    navsat_params = os.path.join(
+        get_package_share_directory('pioneer_robot'),
+        'config',
+        'navsat_transform_params.yaml'
+    )
+
     return LaunchDescription([
 
-        # DDS
-        SetEnvironmentVariable(
-            name='RMW_IMPLEMENTATION',
-            value='rmw_cyclonedds_cpp'
+        # DDS — let system use default RMW to avoid FastCDR symbol mismatch
+        # SetEnvironmentVariable(
+        #     name='RMW_IMPLEMENTATION',
+        #     value='rmw_fastrtps_cpp'
+        # ),
+
+        # 0. map→odom identity TF (Nav2 needs map frame)
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='map_odom_static',
+            output='screen',
+            arguments=['0', '0', '0', '0', '0', '0', 'map', 'odom']
         ),
 
         # 1. Pioneer robot driver
@@ -56,7 +78,7 @@ def generate_launch_description():
                 'hostname': '192.168.0.1',
                 'use_binary_protocol': True,
                 'tf_base_frame_id': 'base_link',
-                'tf_base_lidar_xyz_rpy': '0.20 0.0 0.104 0.0 0.0 -1.5708',
+                'tf_base_lidar_xyz_rpy': '0.20,0.0,0.104,0.0,0.0,-1.5708',
             }],
             remappings=[('sick_tim_7xx/scan', '/scan')]
         ),
@@ -80,9 +102,41 @@ def generate_launch_description():
             output='screen'
         ),
 
-        # 6. IMU — publishes /imu/data_raw
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(phidgets_launch)
+        # 6. IMU static TF: base_link → imu_link (adjust xyz if IMU position differs)
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='base_link_imu_static',
+            output='screen',
+            arguments=['0', '0', '0.1', '0', '0', '0', 'base_link', 'imu_link']
+        ),
+
+        # 6b. phidgets_spatial — AHRS + magnetometer → absolute yaw in /imu/data_raw
+        ComposableNodeContainer(
+            name='phidget_container',
+            namespace='',
+            package='rclcpp_components',
+            executable='component_container',
+            composable_node_descriptions=[
+                ComposableNode(
+                    package='phidgets_spatial',
+                    plugin='phidgets::SpatialRosI',
+                    name='phidgets_spatial',
+                    parameters=[{
+                        'use_orientation': True,
+                        'spatial_algorithm': 'ahrs',
+                        'frame_id': 'imu_link',
+                        'ahrs_angular_velocity_threshold': 1.0,
+                        'ahrs_angular_velocity_delta_threshold': 0.1,
+                        'ahrs_acceleration_threshold': 0.1,
+                        'ahrs_mag_time': 10.0,
+                        'ahrs_accel_time': 10.0,
+                        'ahrs_bias_time': 1.25,
+                        'heating_enabled': False,
+                    }],
+                ),
+            ],
+            output='both',
         ),
 
         # 7. GPS
@@ -94,7 +148,7 @@ def generate_launch_description():
             parameters=[{'port': '/dev/ttyACM0', 'baud': 9600}]
         ),
 
-        # 8. EKF — /odom + /imu/data_raw → /odometry/filtered
+        # 8. EKF — /odom + /imu/data_raw → /odometry/filtered (odom frame)
         Node(
             package='robot_localization',
             executable='ekf_node',
@@ -149,6 +203,14 @@ def generate_launch_description():
             package='pioneer_robot',
             executable='cone_detector',
             name='cone_detector',
+            output='screen'
+        ),
+
+        # 12. GPS logger — prints lat/lon at 1 Hz
+        Node(
+            package='pioneer_robot',
+            executable='gps_logger',
+            name='gps_logger',
             output='screen'
         ),
     ])
